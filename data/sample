@@ -556,6 +556,22 @@ displayRule: {
         }
     ]
 },
+{
+    "Question": "How do I display locations as a list in MapsIndoors?",
+    "Answer": "You can display locations as a list in MapsIndoors by following these steps:",
+    "Context": [
+        {
+            "Step": "Search for locations using the 'mapsindoors.services.LocationsService.getLocations' function, which returns a promise when the query has executed."
+        },
+        {
+            "Step": "Attach an event listener to an input element (e.g., 'searchElement') to listen for user input."
+        },
+        {
+            "Step": "Use a debounce function to prevent rapid successive calls to the service. This function introduces a delay of 500ms before executing the query, unless debounce is called again within 500ms, resetting the timer.",
+            "Code": "searchElement.addEventListener('input', debounce((e) => {\n    const value = e.target.value;\n    if (value > '') {\n        mapsindoors.services.LocationsService.getLocations({ q: value, includeOutsidePOI: true })\n            .then(displayResults)\n            .then(filterMap);\n    } else {\n        clearResults();\n        clearFilter();\n    }\n}, 500));"
+        }
+    ]
+},
 
 
 
