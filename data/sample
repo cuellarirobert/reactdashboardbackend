@@ -570,13 +570,18 @@ displayRule: {
    "Answer": "The 'zoom_changed' event signifies a change in map zoom level. You can listen to it using 'mapsIndoors.addListener('zoom_changed', (zoomLevel) => {...});'. It provides a normalized MapsIndoors zoom level, which is recommended for evaluating DisplayRules due to differences in zoom levels across different map providers.",
    "Context": "This event is crucial for tracking changes in zoom level, which can affect the presentation and visibility of map features. It provides a normalized zoom level for consistency across different map providers."
  },
-{
+ {
    "Question": "How can I change the icon or color of a location when a user clicks on it?",
    "Answer": "You can change the icon or color of a location when a user clicks on it by listening to the 'click' event and dynamically updating the display rule for that location. Here's the code example: mapsIndoorsInstance.addListener('click', (location) => { const newDisplayRule = { visible: true, polygonVisible: true, polygonFillColor: \"#FFF122\", icon: \"https://app.mapsindoors.com/mapsindoors/cms/assets/icons/misc/custom-marker.png\", iconVisible: true, iconScale: 1.5 }; mapsIndoorsInstance.setDisplayRule(location.id, newDisplayRule); });",
    "Context": "In this code, we listen for the 'click' event and create a new display rule to update the location's visibility, polygon, polygon fill color, icon, and more. You can customize these properties to achieve the desired appearance changes."
-}
-
-
-
-
-]
+ },
+ {
+   "Question": "How can I create custom filtering in MapsIndoors?",
+   "Answer": "You can create custom filtering in MapsIndoors by using display rules to adjust the appearance of location results programmatically. Here's an example of how to set locations, especially polygons, to red and reset the display rule back to their original settings using setDisplayRule(id, null):\n\n```javascript\nlet previousLocationIds = []; // Keep track of previously filtered locations\n\n// Custom filter function\nconst filterLocations = (locationIds, rule) => {\n    // Clear display rules of previously filtered locations\n    if(previousLocationIds.length > 0) {\n        clearFilter(previousLocationIds);\n    }\n\n    // Apply the display rule to all the locations\n    locationIds.forEach(id => {\n        mapsIndoorsInstance.setDisplayRule(id, rule);\n    });\n\n    // Update the list of previously filtered locations\n    previousLocationIds = locationIds;\n};\n\nconst clearFilter = (locationIds) => {\n    // Reset the display rule of all the locations\n    locationIds.forEach(id => {\n        mapsIndoorsInstance.setDisplayRule(id, null);\n    });\n};\n\nconst rule = { \n    visible: true,\n    polygonVisible: true,\n    polygonFillColor: \"#FF0000\",\n    polygonFillOpacity: 1,\n    iconSize: \n    {\n        width: 30,\n        height: 30\n    },\n    labelVisible: true,\n};\n```\n",
+   "Context": "In this code example, you can create custom filtering by defining a filter function that applies a display rule to specified location IDs. The code allows you to set the locations, particularly polygons, to a red color and provides a way to reset the display rule for those locations. This custom filtering method enables you to adjust the appearance of location results according to your specific requirements."
+ },
+ {
+   "Question": "How can I hide all other content on the map except what I'd like to filter?",
+   "Answer": "Hiding all other content on the map, except what you'd like to filter, is primarily relevant when working with Raster tiles. However, keep in mind that hiding all other content may result in very limited visibility on the map for users. To achieve this, you can use the `mapsIndoorsInstance.filter(locationIds)` method after performing a search. The `filter` parameter should be an array of location IDs to filter the map by. You can pass `null` as the filter to clear the filter.",
+   "Context": "The provided code example demonstrates how to filter locations based on category and provides a way to control the visibility of specific location content on the map. It's important to consider the implications of hiding all other content, as it may result in a limited map view for users."
+ },]
