@@ -592,6 +592,24 @@ displayRule: {
    "Answer": "Yes, it is possible to load a specific floor immediately in MapsIndoors WebSDK without relying on the floor selector. You can use the 'setFloor(floorIndex)' method to programmatically set the desired floor. For example, you can call 'myMapsIndoorsInstance.setFloor(floorIndex)' to load a particular floor without having to change the default floor globally. The 'floorIndex' should be an integer and typically a multiple of 10, representing the desired floor.",
    "Context": "The 'mapsIndoorsInstance.setFloor()' method allows you to select and load a specific floor in MapsIndoors WebSDK without requiring user interaction through the floor selector. This is useful for providing direct links to specific floors or programmatically controlling the displayed floor."
 },
+{
+    "Question": "How do I add Mapbox popups when I click on a location or search for one?",
+    "Answer": "To add Mapbox popups when clicking on a location or searching for one in MapsIndoors, you can follow these steps:",
+    "Context": [
+        {
+            "Step": "Define how you want to retrieve the location, either by searching or using a click listener event via the MapsIndoors SDK."
+        },
+        {
+            "Step": "Once you have the location objects, you can work with the following JavaScript code:",
+            "Code": "let popup;\n\nconst handleMouseEnter = debounce((location) => {\n    // If a popup exists, remove it\n    if (popup) {\n        popup.remove();\n    }\n\n    console.log('hi');\n    console.log(location);\n\n    const coords = location.properties.anchor.coordinates;\n\n    const infoWindowContent = `<h2>${location.properties.name}</h2>`;\n\n    popup = new mapboxgl.Popup({ closeOnClick: true, closeButton: true, className: 'info-popup' })\n        .setLngLat([coords[1], coords[0]])\n        .setHTML(infoWindowContent)\n        .addTo(mapInstance);\n}, 500); // Debounce time is 250 milliseconds"
+        },
+        {
+            "Step": "In this code, 'mapInstance' would typically be the 'mapsIndoorsInstance.getMapView(mapView)' where 'mapView' is initialized when you need to load the map on the page.",
+            "Example": "const mapView = new mapsindoors.mapView.MapboxView(...);\nconst mapsIndoors = new mapsindoors.MapsIndoors({mapView: mapView})"
+        }
+    ]
+},
+
 
 
 
