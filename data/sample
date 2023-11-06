@@ -545,7 +545,7 @@ displayRule: {
         bearing":0
     }
 }"
-{
+  {
     "Question": "How can I retrieve the location details by external IDs like 'ABC123', 'ABC124,' and 'ABC125' using MapsIndoors?",
     "Answer": "mapsIndoorsInstance.getLocationsByExternalId(['ABC123', 'ABC124', 'ABC125'])\n  .then(locations => {\n    // Handle the retrieved locations here\n  });",
     "Context": "ASYNC STATIC\ngetLocationsByExternalId(externalId) → {Promise.<Array.<Location>>}\nGet locations by externalId\n\nParameters:\n- externalId (string | or Array.<string>): The externalId of the location or an array of external IDs.\n\nReturns:\nType: Promise.<Array.<Location>>\n\nThis function retrieves location information based on external IDs. It returns a Promise that resolves to an array of Location objects. You can use this function to fetch location data by providing one or more external IDs."
@@ -575,7 +575,7 @@ displayRule: {
     "Answer": "<!-- index.html -->\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>MapsIndoors</title>\n  <script src=\"https://app.mapsindoors.com/mapsindoors/js/sdk/4.25.0/mapsindoors-4.25.0.js.gz?apikey=demo\"></script>\n  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>\n  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />\n</head>\n<body>\n<div id=\"map\" style=\"width: 600px; height: 600px;\"></div>\n<script type=\"text/javascript\">\n\nconst mapViewOptions = {\n    accessToken: 'YOUR_MAPBOX_TOKEN',\n    element: document.getElementById('map'),\n    center: { lat: 38.8974905, lng: -77.0362723 }, // The White House\n    zoom: 19,\n    maxZoom: 22,\n};\nconst mapViewInstance = new mapsindoors.mapView.MapboxView(mapViewOptions);\nconst mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance,\n});\n</script>\n</body>\n</html>",
     "Context": "Context:\n\n- `MapboxView` is the MapsIndoors MapView for MapBox, and you can pass Mapbox parameters to it.\n- `element` is the HTML element in which the map will be rendered.\n- `accessToken` is the Mapbox access token required for map rendering.\n- `center` specifies the initial geographical centerpoint of the map.\n- `zoom` sets the initial zoom level of the map.\n- `maxZoom` defines the maximum zoom level of the map.\n\n- `MapsIndoors` is a class that creates a new instance of MapsIndoors. You can provide options including `mapView` (an instance of a MapView), `venue` (the initial venue), `buildingOutlineOptions`, and `labelOptions`."
   },
-{
+  {
     "Question": "What are the Namespaces in the MapsIndoors Web SDK?",
     "Answer": "The MapsIndoors Web SDK has the following Namespaces:\n- `mapsindoors`\n- `directions`\n- `mapView`\n- `services`",
     "Context": "Namespaces are initialized when the script tag loads."
@@ -594,6 +594,32 @@ displayRule: {
     "Question": "What Services are available in the MapsIndoors Web SDK?",
     "Answer": "The MapsIndoors Web SDK offers various Services, and they do not need to be initialized separately as they are all methods of the already initialized `mapsindoors` namespace. Some of the Service classes include:\n- `AppConfigService`\n- `BookingService`\n- `DirectionsService`\n- `DistanceMatrixService`\n- `GeoCodeService`\n- `LocationsService`\n- `ShareService`\n- `SolutionsService`\n- `VenuesService`",
     "Context": "Services are accessed through the `services` namespace and provide functionality like routing, geocoding, and venue management."
-  }
+  },
+  {
+   "Question": "How can I retrieve a list of all categories associated with the current solution using the MapsIndoors Web SDK?",
+   "Answer": "You can get a list of all categories associated with the current solution by calling the `getCategories` method of the `SolutionsService` class. Here's an example of how to use it:\n\n```javascript\nmapsindoors.services.SolutionsService.getCategories().then(categories => { /* Handle the list of categories here */ });\n```",
+   "Context": "This method allows you to fetch the categories that are available within your current solution, which can be useful for categorizing different aspects of your MapsIndoors data."
+ },
+ {
+   "Question": "How do I obtain detailed information about the current solution in the MapsIndoors Web SDK?",
+   "Answer": "To get detailed information about the current solution, you can use the `getSolution` method provided by the `SolutionsService` class. Here's an example of how to call it:\n\n```javascript\nmapsindoors.services.SolutionsService.getSolution().then(solution => { /* Handle the solution details here */ });\n```",
+   "Context": "This method is useful for retrieving comprehensive information about the currently loaded solution, including details like venue, building, and configuration settings."
+ },
+ {
+   "Question": "How can I retrieve a list of available user roles associated with the current solution in the MapsIndoors Web SDK?",
+   "Answer": "You can obtain a list of available user roles associated with the current solution by using the `getUserRoles` method from the `SolutionsService` class. Here's an example of how to do it:\n\n```javascript\nmapsindoors.services.SolutionsService.getUserRoles().then(userRoles => { /* Handle the user roles list here */ });\n```",
+   "Context": "This method enables you to fetch the available user roles within your current solution, which can be valuable for role-based access control and user management in your MapsIndoors application. User roles allow you to define Locations and Routes based on specific roles, providing a more tailored experience for different user groups."
+ },
+ {
+   "Question": "How can I populate a dropdown menu with a list of buildings for a selected venue in the MapsIndoors Web SDK?",
+   "Answer": "To populate a dropdown menu with a list of buildings for a selected venue, you can use the `getBuildings` method from the `VenuesService` class to retrieve the buildings. Once you have the buildings, you can iterate through them and create dropdown options to represent each building. Here's an example:\n\n```javascript\nmapsindoors.services.VenuesService.getBuildings(venueId).then((buildings) => { ... });\n```",
+   "Context": "This method allows you to dynamically populate a dropdown menu with buildings specific to the selected venue, which can be helpful for users to choose a building and access location-related information or services."
+},
+{
+   "Question": "How can I populate a dropdown menu with a list of venues in the MapsIndoors Web SDK?",
+   "Answer": "To populate a dropdown menu with a list of venues, you can use the `getVenues` method from the `VenuesService` class to retrieve the venues. Once you have the venues, you can populate the dropdown with the venue options. Here's an example:\n\n```javascript\nmapsindoors.services.VenuesService.getVenues().then((venues) => { ... });\n```",
+   "Context": "This method enables you to provide users with a dropdown menu containing a list of venues available in your MapsIndoors solution, making it easy for them to select a venue and navigate to specific locations within it."
+}
+
 
 ]
