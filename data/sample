@@ -510,11 +510,10 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 
 
-
 {
-  "input": "How can I change the icon for specific types or locations at runtime in MapsIndoors?",
-  "output": "You can modify the icon for specific types or locations by setting a custom 'icon' URL in the DisplayRule for those types or locations. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
-  "code": "// Example: Changing the icon for 'meeting_room' type\nconst customDisplayRule = {\n    icon: 'custom_meeting_room_icon.png'\n};\nmapsIndoorsInstance.setDisplayRule('meeting_room', customDisplayRule);"
+"input": "How can I change the icon for specific types or locations at runtime in MapsIndoors?",
+"output": "To change the icon for specific types or locations at runtime in MapsIndoors, you can use the mapsIndoorsInstance.setDisplayRule method. This method allows you to define a custom display rule that includes the icon and other properties. You can apply this rule to one or more locations by providing their IDs in an array. Here's an example of how to do it:",
+"code": "// Example: Changing the icon for specific locations\nconst locationIds = [\n '3ee585cd801d47e5b8c4d66a',\n '437265b21c6047d2aff066b7',\n '09d96b96e77a4d8ab8a29352'\n];\n\nconst customDisplayRule = {\n polygonVisible: true,\n polygonFillColor: '#90ee90',\n polygonFillOpacity: 1,\n polygonZoomFrom: 16,\n polygonZoomTo: 22,\n visible: true,\n icon: 'custom_meeting_room_icon.png'\n};\n\nmapsIndoorsInstance.setDisplayRule(locationIds, customDisplayRule);"
 }
 
 
