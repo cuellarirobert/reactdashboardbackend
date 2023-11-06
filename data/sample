@@ -291,106 +291,6 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 }
 
 
-,{"input": "How can I listen to the 'building_changed' event in MapsIndoors?",
-  "output": "You can listen to the 'building_changed' event by calling 'mapsIndoors.addListener('building_changed', (building) => {...});'. This event fires when the building focus changes, either by map movement or by calling 'mapsIndoors.fitBuilding(building)'."
-}
-
-
-,{"input": "What is the 'building_outline_changed' event in MapsIndoors used for?",
-  "output": "The 'building_outline_changed' event is used to detect when the style for the building outline has changed in MapsIndoors."
-}
-
-
-,{"input": "How do you listen to the 'click' event in MapsIndoors?",
-  "output": "To listen to the 'click' event, you can use 'mapsIndoors.addListener('click', (location) => {...});'. This event is triggered when a location on the map is clicked."
-}
-
-
-
-
-,{"input": "What is the purpose of the 'floor_changed' event in MapsIndoors?",
-  "output": "The 'floor_changed' event is used to detect when the floor index changes. You can listen to it using 'mapsIndoors.addListener('floor_changed', (floorIndex) => {...});'. The floor index can change through 'mapsIndoors.setFloor(index)' or interaction with the FloorSelector."
-}
-
-
-,{"input": "How do you listen to the 'label_options_changed' event in MapsIndoors?",
-  "output": "To listen to the 'label_options_changed' event, you can use 'mapsIndoors.addListener('label_options_changed', () => {...});'. This event is triggered when the style for labels changes."
-}
-
-
-,{"input": "What is the 'mouseenter' event in MapsIndoors used for?",
-  "output": "The 'mouseenter' event is used when the cursor enters the bounds of a location. You can listen to it with 'mapsIndoors.addListener('mouseenter', (location) => {...});'."
-}
-
-
-,{"input": "How can I detect when the cursor leaves the bounds of a location in MapsIndoors?",
-  "output": "You can use the 'mouseleave' event by listening to 'mapsIndoors.addListener('mouseleave', (location) => {...});'. This event fires when the cursor leaves the bounds of a location."
-}
-
-
-,{"input": "What is the purpose of the 'ready' event in MapsIndoors?",
-  "output": "The 'ready' event is used to signal that MapsIndoors has been initialized and is ready for use. You can listen to it using 'mapsIndoors.addListener('ready', () => {...});'."
-}
-
-
-
-
-,{"input": "How can you detect when display rules or locations change and those changes are reflected on the map in MapsIndoors?",
-  "output": "You can listen to the 'redraw' event with 'mapsIndoors.addListener('redraw', () => {...});'. This event fires when a display rule or location changes, and those changes are reflected on the map."
-}
-
-
-,{"input": "What does the 'zoom_changed' event in MapsIndoors signify?",
-  "output": "The 'zoom_changed' event signifies a change in map zoom level. You can listen to it using 'mapsIndoors.addListener('zoom_changed', (zoomLevel) => {...});'. It provides a normalized MapsIndoors zoom level, which is recommended for evaluating DisplayRules due to differences in zoom levels across different map providers."
-}
-
-
-
-,{"input": "What event is triggered when a user selects a different floor using the floor selector?",
-  "output": "The 'floor_changed' event is triggered when a user selects a different floor using the floor selector in MapsIndoors."
-}
-
-
-,{"input": "How can you use the 'floor_changed' event in MapsIndoors to enhance user experience?",
-  "output": "You can use the 'floor_changed' event in MapsIndoors to potentially filter a list view or perform other actions when a user chooses to show a different floor."
-}
-
-
-,{"input": "What does the 'mouseenter' event in MapsIndoors relate to?",
-  "output": "The 'mouseenter' event in MapsIndoors is related to mouse hover interactions with locations on the map."
-}
-
-
-
-,{"input": "How is the 'mouseleave' event in MapsIndoors used?",
-  "output": "The 'mouseleave' event in MapsIndoors is used to detect when the mouse is no longer over a location on the map."
-}
-
-
-,{"input": "What does the 'ready' event indicate in MapsIndoors?",
-  "output": "The 'ready' event in MapsIndoors indicates that the MapsIndoors library has been initialized and is ready for use."
-}
-
-
-
-,{"input": "How can the 'redraw' event be helpful to developers in MapsIndoors?",
-  "output": "The 'redraw' event in MapsIndoors helps developers understand when changes related to display rules, such as icon or label updates, have taken place successfully on the map."
-}
-
-
-
-,{"input": "What does the 'venue_changed' event signify in MapsIndoors?",
-  "output": "The 'venue_changed' event in MapsIndoors is triggered when a new venue becomes focused in the viewport."
-}
-
-
-
-,{"input": "How can the 'zoom_changed' event be used by developers in MapsIndoors?",
-  "output": "The 'zoom_changed' event in MapsIndoors can be used for tasks like programmatically handling label collisions or adjusting the size and visibility of icons based on zoom level changes."
-}
-
-
-
 
 
 ,{"input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
@@ -614,12 +514,63 @@ displayRule: {
    "Question": "How can I populate a dropdown menu with a list of buildings for a selected venue in the MapsIndoors Web SDK?",
    "Answer": "To populate a dropdown menu with a list of buildings for a selected venue, you can use the `getBuildings` method from the `VenuesService` class to retrieve the buildings. Once you have the buildings, you can iterate through them and create dropdown options to represent each building. Here's an example:\n\n```javascript\nmapsindoors.services.VenuesService.getBuildings(venueId).then((buildings) => { ... });\n```",
    "Context": "This method allows you to dynamically populate a dropdown menu with buildings specific to the selected venue, which can be helpful for users to choose a building and access location-related information or services."
-},
-{
+ },
+ {
    "Question": "How can I populate a dropdown menu with a list of venues in the MapsIndoors Web SDK?",
    "Answer": "To populate a dropdown menu with a list of venues, you can use the `getVenues` method from the `VenuesService` class to retrieve the venues. Once you have the venues, you can populate the dropdown with the venue options. Here's an example:\n\n```javascript\nmapsindoors.services.VenuesService.getVenues().then((venues) => { ... });\n```",
    "Context": "This method enables you to provide users with a dropdown menu containing a list of venues available in your MapsIndoors solution, making it easy for them to select a venue and navigate to specific locations within it."
-}
+ },
+ {
+   "Question": "How can I listen to the 'building_changed' event in MapsIndoors?",
+   "Answer": "You can listen to the 'building_changed' event by calling 'mapsIndoors.addListener('building_changed', (building) => {...});'. This event fires when the building focus changes, either by map movement or by calling 'mapsIndoors.fitBuilding(building)'.",
+   "Context": "This event is useful for detecting changes in the focused building, which can be important for dynamic content updates or user interactions based on the building context."
+ },
+ {
+   "Question": "What is the 'building_outline_changed' event in MapsIndoors used for?",
+   "Answer": "The 'building_outline_changed' event is used to detect when the style for the building outline has changed in MapsIndoors.",
+   "Context": "This event is handy when you need to respond to changes in the visual representation of building outlines, which may be triggered by style adjustments or other factors."
+ },
+ {
+   "Question": "How do you listen to when a user clicks on the map with a 'click' event in MapsIndoors?",
+   "Answer": "To listen to the 'click' event, you can use 'mapsIndoors.addListener('click', (location) => {...});'. This event is triggered when a location on the map is clicked.",
+   "Context": "The 'click' event allows you to capture user interactions with map locations, making it essential for implementing custom click behavior, like the beginning of a flow which results in showing a Mapbox popup."
+ },
+ {
+   "Question": "What is the purpose of the 'floor_changed' event in MapsIndoors?",
+   "Answer": "The 'floor_changed' event is used to detect when the floor index changes. You can listen to it using 'mapsIndoors.addListener('floor_changed', (floorIndex) => {...});'. The floor index can change through 'mapsIndoors.setFloor(index)' or interaction with the FloorSelector.",
+   "Context": "This event is crucial for maintaining awareness of floor level changes and enables you to adapt the UI or data displayed on the map accordingly."
+ },
+ {
+   "Question": "How do you listen to the 'label_options_changed' event in MapsIndoors?",
+   "Answer": "To listen to the 'label_options_changed' event, you can use 'mapsIndoors.addListener('label_options_changed', () => {...});'. This event is triggered when the style for labels changes.",
+   "Context": "This event is relevant for tracking changes in label styling, which can be essential for maintaining consistent and appealing label presentations."
+ },
+ {
+   "Question": "What is the 'mouseenter' event in MapsIndoors used for?",
+   "Answer": "The 'mouseenter' event is used when the cursor enters the bounds of a location. You can listen to it with 'mapsIndoors.addListener('mouseenter', (location) => {...});'.",
+   "Context": "The 'mouseenter' event is valuable for capturing user interactions when the cursor enters a location's area, which can be used for providing additional information or highlighting features."
+ },
+ {
+   "Question": "How can I detect when the cursor leaves the bounds of a location in MapsIndoors?",
+   "Answer": "You can use the 'mouseleave' event by listening to 'mapsIndoors.addListener('mouseleave', (location) => {...});'. This event fires when the cursor leaves the bounds of a location.",
+   "Context": "The 'mouseleave' event is essential for detecting when the cursor exits a location's area, allowing you to trigger relevant actions or changes in response. Example you may wish to hide a popup when a user mouseleaves a MapsIndoors area."
+ },
+ {
+   "Question": "What is the purpose of the 'ready' event in MapsIndoors?",
+   "Answer": "The 'ready' event is used to signal that MapsIndoors has been initialized and is ready for use. You can listen to it using 'mapsIndoors.addListener('ready', () => {...});'.",
+   "Context": "The 'ready' event indicates when MapsIndoors is fully initialized and prepared for interactions, making it a crucial event for starting any application logic that relies on MapsIndoors."
+ },
+ {
+   "Question": "How can you detect when display rules or locations change and those changes are reflected on the map in MapsIndoors?",
+   "Answer": "You can listen to the 'redraw' event with 'mapsIndoors.addListener('redraw', () => {...});'. This event fires when a display rule or location changes, and those changes are reflected on the map.",
+   "Context": "The 'redraw' event is beneficial for developers to respond to dynamic map updates caused by changes to display rules"
+ },
+ {
+   "Question": "What does the 'zoom_changed' event in MapsIndoors signify?",
+   "Answer": "The 'zoom_changed' event signifies a change in map zoom level. You can listen to it using 'mapsIndoors.addListener('zoom_changed', (zoomLevel) => {...});'. It provides a normalized MapsIndoors zoom level, which is recommended for evaluating DisplayRules due to differences in zoom levels across different map providers.",
+   "Context": "This event is crucial for tracking changes in zoom level, which can affect the presentation and visibility of map features. It provides a normalized zoom level for consistency across different map providers."
+ }
+
 
 
 ]
