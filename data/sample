@@ -572,6 +572,23 @@ displayRule: {
         }
     ]
 },
+{
+    "Question": "What's the difference between setDisplayRule and filter methods on the MapsIndoors class?",
+    "Answer": "The difference between the 'setDisplayRule' and 'filter' methods on the MapsIndoors class is as follows:",
+    "Context": [
+        {
+            "Explanation": "You use the 'setDisplayRule' method to define a display rule for specific location objects. It allows you to customize the appearance of individual locations by specifying visual properties like colors, icons, or visibility."
+        },
+        {
+            "Explanation": "On the other hand, the 'filter' method is used to control the visibility of location objects on the map. It allows you to hide all location objects except the ones specified in the filter. If 'null' is passed as the filter, it clears the filter and shows all location objects."
+        },
+        {
+            "Important Note": "It's essential to distinguish between these two methods as they serve entirely different functionality. 'setDisplayRule' is for customizing the visual appearance of individual locations, while 'filter' is for controlling which location objects are displayed on the map."
+        }
+    ]
+}
+
+
 
 
 
