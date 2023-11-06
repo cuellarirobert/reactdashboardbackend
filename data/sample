@@ -575,5 +575,25 @@ displayRule: {
     "Answer": "<!-- index.html -->\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>MapsIndoors</title>\n  <script src=\"https://app.mapsindoors.com/mapsindoors/js/sdk/4.25.0/mapsindoors-4.25.0.js.gz?apikey=demo\"></script>\n  <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>\n  <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />\n</head>\n<body>\n<div id=\"map\" style=\"width: 600px; height: 600px;\"></div>\n<script type=\"text/javascript\">\n\nconst mapViewOptions = {\n    accessToken: 'YOUR_MAPBOX_TOKEN',\n    element: document.getElementById('map'),\n    center: { lat: 38.8974905, lng: -77.0362723 }, // The White House\n    zoom: 19,\n    maxZoom: 22,\n};\nconst mapViewInstance = new mapsindoors.mapView.MapboxView(mapViewOptions);\nconst mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance,\n});\n</script>\n</body>\n</html>",
     "Context": "Context:\n\n- `MapboxView` is the MapsIndoors MapView for MapBox, and you can pass Mapbox parameters to it.\n- `element` is the HTML element in which the map will be rendered.\n- `accessToken` is the Mapbox access token required for map rendering.\n- `center` specifies the initial geographical centerpoint of the map.\n- `zoom` sets the initial zoom level of the map.\n- `maxZoom` defines the maximum zoom level of the map.\n\n- `MapsIndoors` is a class that creates a new instance of MapsIndoors. You can provide options including `mapView` (an instance of a MapView), `venue` (the initial venue), `buildingOutlineOptions`, and `labelOptions`."
   },
+{
+    "Question": "What are the Namespaces in the MapsIndoors Web SDK?",
+    "Answer": "The MapsIndoors Web SDK has the following Namespaces:\n- `mapsindoors`\n- `directions`\n- `mapView`\n- `services`",
+    "Context": "Namespaces are initialized when the script tag loads."
+  },
+  {
+    "Question": "What are the Classes in the MapsIndoors Web SDK?",
+    "Answer": "The MapsIndoors Web SDK includes several Classes, which need to be instantiated at runtime by the developer. Some of these classes are:\n- `BadgeRenderer`\n- `BookingAuthenticationConfig`\n- `DirectionsRenderer`\n- `FloorSelector`\n- `GoogleMapsProvider`\n- `GoogleMapsView`\n- `KVOObject`\n- `LiveDataInfo`\n- `LiveDataManager`\n- `Location`\n- `Mapbox2DLayer`\n- `MapboxProvider`\n- `MapboxView`\n- `MapsIndoors`\n- `MPBooking`\n- `PositionControl`\n- `Settings3D`\n- `SolutionConfig`\n- `UserRole`",
+    "Context": "Classes need to be instantiated at runtime by the developer."
+  },
+  {
+    "Question": "What are the Interfaces in the MapsIndoors Web SDK?",
+    "Answer": "Interfaces in the MapsIndoors Web SDK describe the key-value pairs for different objects. Some of the Interfaces include:\n- `AppConfig`\n- `Building`\n- `BuildingOutlineOptions`\n- `Category`\n- `DirectionsRendererOptions`\n- `DirectionsRequest`\n- `DirectionsResult`\n- `DisplayRule`\n- `DistanceMatrixResult`\n- `EntryPoint`\n- `Field`\n- `LabelOptions`\n- `LatLngLiteral`\n- `Leg`\n- `LiveUpdate`\n- `MapsIndoorsOptions`\n- `MapStyle`\n- `Padding`\n- `PositionControlOptions`\n- `ReverseGeoCodeResult`\n- `Route`\n- `Solution`\n- `Step`\n- `StepContext`\n- `Type`\n- `Venue`",
+    "Context": "Interfaces provide a structured definition of objects within MapsIndoors."
+  },
+  {
+    "Question": "What Services are available in the MapsIndoors Web SDK?",
+    "Answer": "The MapsIndoors Web SDK offers various Services, and they do not need to be initialized separately as they are all methods of the already initialized `mapsindoors` namespace. Some of the Service classes include:\n- `AppConfigService`\n- `BookingService`\n- `DirectionsService`\n- `DistanceMatrixService`\n- `GeoCodeService`\n- `LocationsService`\n- `ShareService`\n- `SolutionsService`\n- `VenuesService`",
+    "Context": "Services are accessed through the `services` namespace and provide functionality like routing, geocoding, and venue management."
+  }
 
 ]
