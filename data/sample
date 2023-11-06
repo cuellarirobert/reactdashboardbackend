@@ -326,8 +326,7 @@ displayRule: {
         heightMeters": 0,
         bearing":0
     }
-}"
-  {
+}"{
     "Question": "How can I retrieve the location details by external IDs like 'ABC123', 'ABC124,' and 'ABC125' using MapsIndoors?",
     "Answer": "mapsIndoorsInstance.getLocationsByExternalId(['ABC123', 'ABC124', 'ABC125'])\n  .then(locations => {\n    // Handle the retrieved locations here\n  });",
     "Context": "ASYNC STATIC\ngetLocationsByExternalId(externalId) → {Promise.<Array.<Location>>}\nGet locations by externalId\n\nParameters:\n- externalId (string | or Array.<string>): The externalId of the location or an array of external IDs.\n\nReturns:\nType: Promise.<Array.<Location>>\n\nThis function retrieves location information based on external IDs. It returns a Promise that resolves to an array of Location objects. You can use this function to fetch location data by providing one or more external IDs."
@@ -493,7 +492,7 @@ displayRule: {
       "properties.venue": "The venue in which the location is placed."
    }
  },
-{
+ {
    "Question": "Get Locations by Custom IDs and Locate on a Map",
    "Answer": "To get locations by custom IDs and locate them on a map, you can follow these steps:",
    "Context": {
@@ -504,11 +503,6 @@ displayRule: {
       "Step 5": "Use 'mapsIndoorsInstance.setFloor(location.properties.floor)' or a known floor index to set the floor if they are all on the same floor, and 'mapInstance.setCenter' to center the map based on the location's anchor coordinates, or you may wish to find another way to center the map with some other data.",
       "Step 6": "If you wish, you may also set the zoom level if you know there are many locations spread over a larger distance with 'mapsIndoorsInstance.setZoom(FLOAT)' like 'setZoom(19.5)'"
    }
-},
-{
-   "Question": "How can I hide the building and venue labels?",
-   "Answer": "You can hide the building and venue labels by using the 'mapsIndoorsInstance.setDisplayRule(['MI_BUILDING', 'MI_VENUE'], { visible: false });'. This will set the display rule to make building and venue labels invisible on the map.",
-   "Context": "setDisplayRule can target specific location types using their names. In this case, 'MI_BUILDING' and 'MI_VENUE' are reserved location type names, allowing you to directly hide building and venue labels. The target can be a single MapsIndoors location ID, an array of IDs, or a location type name (or multiple names) like in this example."
 },
 {
    "Question": "How can I determine the currently active/displayed floor in MapsIndoors WebSDK using JavaScript?",
@@ -538,16 +532,30 @@ displayRule: {
     ]
 },
 {
-    "Question": "How can I search for meeting rooms (MapsIndoors locations of type 'Meetingroom') on the 5th floor using the getLocations service?",
-    "Answer": "To search for meeting rooms on the 5th floor with MapsIndoors, you can use the 'mapsindoors.services.LocationsService.getLocations' method with the specified floor and types. Here's an example code:",
+    "Question": "How can I obtain the venue's anchor point and set it as the center for my Mapbox map in MapsIndoors using the client library?",
+    "Answer": "To obtain the venue's anchor point and set it as the center for your Mapbox map in MapsIndoors, you can follow these steps:",
     "Context": [
         {
-            "Code": "mapsindoors.services.LocationsService.getLocations({\n    floor: 5,\n    types: ['Meetingroom']\n  }).then(locations => {\n    // Handle the array of meeting room locations\n  });",
-            "Explanation": "This code snippet demonstrates how to use the 'getLocations' service to retrieve locations of type 'Meetingroom' on the 5th floor. You can further process the array of meeting room locations according to your application's needs."
+            "Step": "Call the venue service to get all venues or call 'getVenue('VENUE_ID')' to get a single venue by its ID."
+        },
+        {
+            "Step": "Find the desired venue by its name. For example:",
+            "Code": "const venue = venues.find(venue => venue.name === 'YOUR_VENUE_NAME_HERE');"
+        },
+        {
+            "Step": "Convert the GeoJSON point geometry to a LatLng object. For example:",
+            "Code": "const anchor = { lat: venue.anchor.coordinates[1], lng: venue.anchor.coordinates[0] };"
+        },
+        {
+            "Step": "Initialize the MapboxView with the 'center' property set to the 'anchor'.",
+            "Code": "const mapView = new mapsindoors.mapView.MapboxView({\n    accessToken: mapboxAccessToken,\n    element: document.getElementById('map'),\n    center: anchor, // Assign the anchor as the center.\n    zoom: 15,\n    maxZoom: 21\n});"
+        },
+        {
+            "Step": "Initialize the MapsIndoors SDK. For example:",
+            "Code": "const mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapView,\n    venue: venue,\n    labelOptions: {\n        pixelOffset: { width: 0, height: 14 }\n    }\n});"
         }
     ]
-}
-
+},
 
 
 
