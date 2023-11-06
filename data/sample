@@ -4,7 +4,7 @@
 const resultList = document.getElementById('location-list'); // Assuming you have an HTML list element
 resultList.innerHTML = ''; // Clear existing list
 
-mapsindoors.services.LocationsService.getLocationsByExternalId(myCustomIds).then(locations => {
+mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
   locations.forEach(location => {
     const listItem = document.createElement('li');
     listItem.textContent = location.properties.name;
@@ -15,10 +15,10 @@ mapsindoors.services.LocationsService.getLocationsByExternalId(myCustomIds).then
 
 {
   "input": "Get Locations by Custom IDs and Display on a Map",
-  "output": "const myCustomIds = ['item1', 'item2', 'item3'];
+  "output": "const myCustomIds = ['item1', 'item2', 'item3'];  These IDs must be stored on MapsIndoors locations for this service to return any data. 
 
 myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(customId).then(locations => {
+  mapsindoors.services.LocationsService.getLocationsByExternalId([array of external IDs]).then(locations => {
     if (locations.length > 0) {
       const location = locations[0]; // Assuming the first location is relevant
 
@@ -38,7 +38,7 @@ myCustomIds.forEach(customId => {
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 
 myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(customId).then(locations => {
+  mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
     if (locations.length > 0) {
       const location = locations[0]; // Assuming the first location is relevant
 
@@ -56,7 +56,7 @@ myCustomIds.forEach(customId => {
 let currentPopup = null;
 
 myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(customId).then(locations => {
+  mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
     if (locations.length > 0) {
       const location = locations[0]; // Assuming the first location is relevant
 
@@ -86,7 +86,7 @@ myCustomIds.forEach(customId => {
 let previousInfoWindow = null;
 
 myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(customId).then(locations => {
+  mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
     if (locations.length > 0) {
       const location = locations[0]; // Assuming the first location is relevant
 
