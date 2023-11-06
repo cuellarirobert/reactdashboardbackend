@@ -190,33 +190,6 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 "
 }
 
-
-
-,{"input": "Please explain all the properties of a MapsIndoors location object",
-  "output": {
-    "id": "string - The unique identifier of the location.",
-    "type": "string - The type of the location.",
-    "geometry": "Geometry - This property contains location geometry in GeoJSON format.",
-    "properties": "Properties - Properties object that holds various location properties.",
-    "aliases": "Array of strings - An array of aliases or alternative names for the location.",
-    "anchor": "string - The anchor point for the location.",
-    "building": "string - The building to which the location belongs.",
-    "categories": "Object - A set of categories associated with the location.",
-    "description": "string (nullable) - A textual description of the location. This property can be null.",
-    "displayRule": "DisplayRule (nullable) - The display rule applied to the location for map display.",
-    "externalId": "string (nullable) - An external identifier for the location, if available.",
-    "fields": "Object - Custom properties associated with the location.",
-    "floor": "string - The floor level of the location.",
-    "floorName": "string - The name of the floor on which the location is situated.",
-    "imageURL": "string - The URL of an image associated with the location.",
-    "locationType": "string - The type of location, such as 'POI' (Point of Interest).",
-    "mapElement": "string - The map element to which the location is related.",
-    "name": "string - The name of the location.",
-    "venue": "string - The venue (ID or name) to which the location belongs."
-  }
-}
-
-
 ,{"input": "Access a custom property with the `getFieldForKey` method.",
   "output": {
     "method": "mapsindoors.services.LocationsService.getFieldForKey(key) → Field",
@@ -584,4 +557,33 @@ displayRule: {
    "Question": "How can I hide all other content on the map except what I'd like to filter?",
    "Answer": "Hiding all other content on the map, except what you'd like to filter, is primarily relevant when working with Raster tiles. However, keep in mind that hiding all other content may result in very limited visibility on the map for users. To achieve this, you can use the `mapsIndoorsInstance.filter(locationIds)` method after performing a search. The `filter` parameter should be an array of location IDs to filter the map by. You can pass `null` as the filter to clear the filter.",
    "Context": "The provided code example demonstrates how to filter locations based on category and provides a way to control the visibility of specific location content on the map. It's important to consider the implications of hiding all other content, as it may result in a limited map view for users."
- },]
+ },
+ {
+   "Question": "Please explain all the properties of a MapsIndoors location object",
+   "Answer": "A MapsIndoors location object represents a location on the map following the GeoJSON Feature specification and contains various properties. Here is an explanation of the properties:",
+   "Context": {
+      "id": "Unique identifier of the location.",
+      "type": "Specifies the GeoJSON object type.",
+      "geometry": "Defines the spatial aspects of the location, including coordinates and type. Will be a Point or Polygon, and the structure of the geometry property data will depend on that.",
+      "properties": "Contains various attributes and custom properties of the location.",
+      "properties.aliases": "Alternate names or identifiers for the location, generally used as a search query field.",
+      "properties.anchor": "Specifies a point (lat, lng) where the icon/label is presented.",
+      "properties.building": "The building in which the location is situated.",
+      "properties.categories": "Categories assigned to the location, usually in the CMS.",
+      "properties.description": "A text description providing additional information about the location.",
+      "properties.displayRule": "Rules affecting the visual representation of the location.",
+      "properties.externalId": "An optional external identifier for the location.",
+      "properties.fields": "Custom properties defined for the location.",
+      "properties.floor": "The floor index (from MapsIndoors CMS) on which the location is situated.",
+      "properties.floorName": "The name of the floor, typically presented in the floor selector.",
+      "properties.imageURL": "A URL linking to an image related to the location.",
+      "properties.locationType": "The location type or display type name from the MapsIndoors CMS or Integration API.",
+      "properties.mapElement": "Indicates whether the map element is active.",
+      "properties.name": "The name of the location in the current language set by the SDK.",
+      "properties.type": "Additional type classification of the location from the MapsIndoors CMS.",
+      "properties.venue": "The venue in which the location is placed."
+   }
+ },
+
+
+]
