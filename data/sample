@@ -516,6 +516,10 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 "code": "// Example: Changing the icon for specific locations\nconst locationIds = [\n '3ee585cd801d47e5b8c4d66a',\n '437265b21c6047d2aff066b7',\n '09d96b96e77a4d8ab8a29352'\n];\n\nconst customDisplayRule = {\n polygonVisible: true,\n polygonFillColor: '#90ee90',\n polygonFillOpacity: 1,\n polygonZoomFrom: 16,\n polygonZoomTo: 22,\n visible: true,\n icon: 'custom_meeting_room_icon.png'\n};\n\nmapsIndoorsInstance.setDisplayRule(locationIds, customDisplayRule);"
 }
 
+{
+  "input": "What are MapsIndoors locations and what can I do with them?",
+  "output": "MapsIndoors locations are versatile data points representing specific geographical spots. They can be offices, exhibitors, or room features like firehoses, coffee machines, and TVs. Referred to as 'Locations,' 'Places,' or 'POIs' interchangeably, MapsIndoors uses 'Locations' to define these points. These locations have properties such as ID, type, geometry (in GeoJSON format), aliases, anchor, building, categories, description, display rule, and more. You can interact with these locations using the MapsIndoors SDK through the 'MapsIndoors' class and its 'setDisplayRule' method. This method enables customization of display rules for one or multiple locations, allowing settings like polygon visibility, fill color, and custom icons."
+}
 
 
 {
