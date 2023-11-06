@@ -28,80 +28,8 @@ myCustomIds.forEach(customId => {
 }
 
 
-,{"input": "Display Popup for Locations by Custom IDs on Mapbox",
-  "output": "const myCustomIds = ['item1', 'item2', 'item3'];
-let currentPopup = null;
-
-myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
-    if (locations.length > 0) {
-      const location = locations[0]; // Assuming the first location is relevant
-
-      if (currentPopup) {
-        currentPopup.remove();
-      }
-
-      const coords = location.properties.anchor.coordinates;
-      const popupContent = `
-        <img src='${'Your_custom_image_url_here'}' alt='${location.properties.description}' width='100' height='100' />
-        <h2><a href='${'Your_custom_link_here'}' target='_blank'>${location.properties.name}</a></h2>
-      `;
-
-      currentPopup = new mapboxgl.Popup({ closeOnClick: true, closeButton: true })
-        .setLngLat(coords)
-        .setHTML(popupContent)
-        .addTo(mapInstance);
-    }
-  });
-});"
-}
 
 
-,{"input": "Display Popup for Locations by Custom IDs on Google Maps",
-  "output": "const myCustomIds = ['item1', 'item2', 'item3'];
-let previousInfoWindow = null;
-
-myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId(array of external IDs).then(locations => {
-    if (locations.length > 0) {
-      const location = locations[0]; // Assuming the first location is relevant
-
-      if (previousInfoWindow) {
-        previousInfoWindow.close();
-      }
-
-      const coords = location.properties.anchor.coordinates;
-      const infoWindowContent = `
-        <img src='${'Your_custom_image_url_here'}' alt='${location.properties.description}' width='100' height='100' />
-        <h2><a href='${'Your_custom_link_here'}' target='_blank'>${location.properties.name}</a></h2>
-      `;
-
-      const infoWindowOptions = {
-        content: infoWindowContent,
-        position: {
-          lat: coords[1],
-          lng: coords[0]
-        }
-      };
-
-      const infoWindow = new google.maps.InfoWindow(infoWindowOptions);
-      infoWindow.open(googleMapsInstance);
-      previousInfoWindow = infoWindow;
-    }
-  });
-});"
-}
-
-
-,{"input": "Search for meeting rooms (mapsindoors locations of location type 'Meetingroom' on the 5th floor using getLocations service",
-  "output": "mapsindoors.services.LocationsService.getLocations({
-    floor: 5,
-    types: ['Meetingroom']
-  }).then(locations => {
-    // Handle the array of meeting room locations
-  });
-  "
-}
 
 
 ,{"input": "Search for mapsindoors locations by name using getLocations service",
@@ -609,6 +537,17 @@ displayRule: {
         }
     ]
 },
+{
+    "Question": "How can I search for meeting rooms (MapsIndoors locations of type 'Meetingroom') on the 5th floor using the getLocations service?",
+    "Answer": "To search for meeting rooms on the 5th floor with MapsIndoors, you can use the 'mapsindoors.services.LocationsService.getLocations' method with the specified floor and types. Here's an example code:",
+    "Context": [
+        {
+            "Code": "mapsindoors.services.LocationsService.getLocations({\n    floor: 5,\n    types: ['Meetingroom']\n  }).then(locations => {\n    // Handle the array of meeting room locations\n  });",
+            "Explanation": "This code snippet demonstrates how to use the 'getLocations' service to retrieve locations of type 'Meetingroom' on the 5th floor. You can further process the array of meeting room locations according to your application's needs."
+        }
+    ]
+}
+
 
 
 
