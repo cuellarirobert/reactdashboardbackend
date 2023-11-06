@@ -582,6 +582,16 @@ displayRule: {
    "Answer": "You can hide the building and venue labels by using the 'mapsIndoorsInstance.setDisplayRule(['MI_BUILDING', 'MI_VENUE'], { visible: false });'. This will set the display rule to make building and venue labels invisible on the map.",
    "Context": "setDisplayRule can target specific location types using their names. In this case, 'MI_BUILDING' and 'MI_VENUE' are reserved location type names, allowing you to directly hide building and venue labels. The target can be a single MapsIndoors location ID, an array of IDs, or a location type name (or multiple names) like in this example."
 },
+{
+   "Question": "How can I determine the currently active/displayed floor in MapsIndoors WebSDK using JavaScript?",
+   "Answer": "You can use the 'getFloor()' method to determine the currently active floor in MapsIndoors WebSDK. For example, you can call 'myMapsIndoorsInstance.getFloor()' to retrieve the active floor index, and then use this index to perform specific actions or conditions based on the floor. In your code, you can store the active floor index in a variable (e.g., 'x') and check it to perform actions like 'if (x === 8) { // do something }'.",
+   "Context": "The 'mapsIndoorsInstance.getFloor()' method allows you to programmatically access the current active floor. The floor index returned is an integer, typically a multiple of 10."
+},
+{
+   "Question": "Is it possible to load a particular floor immediately in MapsIndoors WebSDK without using the floor selector?",
+   "Answer": "Yes, it is possible to load a specific floor immediately in MapsIndoors WebSDK without relying on the floor selector. You can use the 'setFloor(floorIndex)' method to programmatically set the desired floor. For example, you can call 'myMapsIndoorsInstance.setFloor(floorIndex)' to load a particular floor without having to change the default floor globally. The 'floorIndex' should be an integer and typically a multiple of 10, representing the desired floor.",
+   "Context": "The 'mapsIndoorsInstance.setFloor()' method allows you to select and load a specific floor in MapsIndoors WebSDK without requiring user interaction through the floor selector. This is useful for providing direct links to specific floors or programmatically controlling the displayed floor."
+},
 
 
 
