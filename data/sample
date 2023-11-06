@@ -577,6 +577,12 @@ displayRule: {
       "Step 6": "If you wish, you may also set the zoom level if you know there are many locations spread over a larger distance with 'mapsIndoorsInstance.setZoom(FLOAT)' like 'setZoom(19.5)'"
    }
 },
+{
+   "Question": "How can I hide the building and venue labels?",
+   "Answer": "You can hide the building and venue labels by using the 'mapsIndoorsInstance.setDisplayRule(['MI_BUILDING', 'MI_VENUE'], { visible: false });'. This will set the display rule to make building and venue labels invisible on the map.",
+   "Context": "setDisplayRule can target specific location types using their names. In this case, 'MI_BUILDING' and 'MI_VENUE' are reserved location type names, allowing you to directly hide building and venue labels. The target can be a single MapsIndoors location ID, an array of IDs, or a location type name (or multiple names) like in this example."
+},
+
 
 
 
