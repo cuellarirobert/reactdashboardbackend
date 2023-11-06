@@ -1,5 +1,4 @@
-{
-  "input": "Get Locations by Custom IDs and Populate a List",
+[{"input": "Get Locations by Custom IDs and Populate a List",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 const resultList = document.getElementById('location-list'); // Assuming you have an HTML list element
 resultList.innerHTML = ''; // Clear existing list
@@ -13,8 +12,7 @@ mapsindoors.services.LocationsService.getLocationsByExternalId(array of external
 });"
 }
 
-{
-  "input": "Get Locations by Custom IDs and Display on a Map",
+,{"input": "Get Locations by Custom IDs and Display on a Map",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];  These IDs must be stored on MapsIndoors locations for this service to return any data. 
 
 myCustomIds.forEach(customId => {
@@ -33,8 +31,7 @@ myCustomIds.forEach(customId => {
 });"
 }
 
-{
-  "input": "Highlight Locations by Custom IDs on the Map",
+,{"input": "Highlight Locations by Custom IDs on the Map",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 
 myCustomIds.forEach(customId => {
@@ -50,8 +47,7 @@ myCustomIds.forEach(customId => {
 }
 
 
-{
-  "input": "Display Popup for Locations by Custom IDs on Mapbox",
+,{"input": "Display Popup for Locations by Custom IDs on Mapbox",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 let currentPopup = null;
 
@@ -80,8 +76,7 @@ myCustomIds.forEach(customId => {
 }
 
 
-{
-  "input": "Display Popup for Locations by Custom IDs on Google Maps",
+,{"input": "Display Popup for Locations by Custom IDs on Google Maps",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 let previousInfoWindow = null;
 
@@ -117,8 +112,7 @@ myCustomIds.forEach(customId => {
 }
 
 
-{
-  "input": "Search for meeting rooms (mapsindoors locations of location type 'Meetingroom' on the 5th floor using getLocations service",
+,{"input": "Search for meeting rooms (mapsindoors locations of location type 'Meetingroom' on the 5th floor using getLocations service",
   "output": "mapsindoors.services.LocationsService.getLocations({
     floor: 5,
     types: ['Meetingroom']
@@ -129,16 +123,14 @@ myCustomIds.forEach(customId => {
 }
 
 
-{
-  "input": "Search for mapsindoors locations by name using getLocations service",
+,{"input": "Search for mapsindoors locations by name using getLocations service",
   "output": "mapsindoors.services.LocationsService.getLocations({ q: 'Conference Room' }).then(locations => {
     // Handle the array of locations with names containing 'Conference Room'
   });
   "
 }
 
-{
-  "input": "Filter mapsindoors locations by mapsindoors categories using getLocations service",
+,{"input": "Filter mapsindoors locations by mapsindoors categories using getLocations service",
   "output": "const categories = ['Meeting Room', 'Office'];
 mapsindoors.services.LocationsService.getLocations({ categories }).then(locations => {
   // Handle the array of locations in the specified categories
@@ -146,8 +138,7 @@ mapsindoors.services.LocationsService.getLocations({ categories }).then(location
 "
 }
 
-{
-  "input": "Search for mapsindoors locations in a specific venue",
+,{"input": "Search for mapsindoors locations in a specific venue",
   "output": "mapsindoors.services.LocationsService.getLocations({
     venue: 'Venue123'
   }).then(locations => {
@@ -158,8 +149,7 @@ mapsindoors.services.LocationsService.getLocations({ categories }).then(location
 
 
 
-{
-  "input": "Sort locations by a specific property in descending order",
+,{"input": "Sort locations by a specific property in descending order",
   "output": "mapsindoors.services.LocationsService.getLocations({
     orderBy: 'capacity',
     sortOrder: 'DESC'
@@ -172,8 +162,7 @@ mapsindoors.services.LocationsService.getLocations({ categories }).then(location
 
 
 
-{
-  "input": "Get the location when a user clicks on a UI card",
+,{"input": "Get the location when a user clicks on a UI card",
   "output": "const locationId = '5666f75bc1843a08b81bef72'; // You get this ID from a UI card click event
 mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
   // Handle the location data
@@ -183,8 +172,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 
 
-{
-  "input": "Get location details when a user selects a location from a list",
+,{"input": "Get location details when a user selects a location from a list",
   "output": "const locationId = '7865a75bc1843a08b81cde45'; // You get this ID from a user's selection in a list
 mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
   // Handle the location data
@@ -194,8 +182,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 
 
-{
-  "input": "Retrieve location details based on user interaction",
+,{"input": "Retrieve location details based on user interaction",
   "output": "const locationId = '9097f75bc1843a08b81dfe27'; // You obtain this ID from a user's interaction
 mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
   // Handle the location data
@@ -205,8 +192,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 
 
-{
-  "input": "Please explain all the properties of a MapsIndoors location object",
+,{"input": "Please explain all the properties of a MapsIndoors location object",
   "output": {
     "id": "string - The unique identifier of the location.",
     "type": "string - The type of the location.",
@@ -231,8 +217,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 }
 
 
-{
-  "input": "Access a custom property with the `getFieldForKey` method.",
+,{"input": "Access a custom property with the `getFieldForKey` method.",
   "output": {
     "method": "mapsindoors.services.LocationsService.getFieldForKey(key) → Field",
     "description": "Get data for a custom property with the provided key, regardless of casing."
@@ -240,197 +225,167 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 }
 
 
-{
-  "input": "Access a custom property with the key 'wikipage'.",
+,{"input": "Access a custom property with the key 'wikipage'.",
   "output": "const wikipageValue = mapsindoors.services.LocationsService.getFieldForKey('wikipage').value;\nconsole.log(wikipageValue);"
 }
 
 
-{
-  "input": "Access a custom property with the key 'customField'.",
+,{"input": "Access a custom property with the key 'customField'.",
   "output": "const customFieldValue = mapsindoors.services.LocationsService.getFieldForKey('customField').value;\nconsole.log(customFieldValue);"
 }
 
 
-{
-  "input": "Use the custom field in an example.",
+,{"input": "Use the custom field in an example.",
   "output": "const infoWindowContent = `\n  <img src=\"${location.properties.imageURL}\" alt=\"${location.properties.description}\" width=\"100\" height=\"100\" />\n  <h2><a href=\"${location.properties.fields.wikipage.value}\" target=\"_blank\">${location.properties.name}</a></h2>\n`;"
 }
 
 
-{
-  "input": "How can I include the MapsIndoors Web SDK in my project and add dependencies for using MapsIndoors with a base map?",
+,{"input": "How can I include the MapsIndoors Web SDK in my project and add dependencies for using MapsIndoors with a base map?",
   "output": "To include the MapsIndoors Web SDK, add the following script tag to your HTML: <script src='https://app.mapsindoors.com/mapsindoors/js/sdk/4.25.0/mapsindoors-4.25.0.js.gz'></script>. For a base map like Mapbox, you'll also need a Mapbox access token and should include these script and link tags: <script src='https://app.mapsindoors.com/mapsindoors/js/sdk/4.24.8/mapsindoors-4.24.8.js.gz?apikey=YOUR_MAPSINDOORS_API_KEY'></script> <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script> <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'."
 }
 
 
 
-{
-  "input": "How do I create a map using MapsIndoors with a base map like Mapbox, and what options can I configure for the map view?",
+,{"input": "How do I create a map using MapsIndoors with a base map like Mapbox, and what options can I configure for the map view?",
   "output": "To create a map using MapsIndoors with Mapbox, you can use JavaScript code like this: const mapViewOptions = { accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN', element: document.getElementById('map'), center: { lat: 38.8974905, lng: -77.0362723 }, zoom: 17, maxZoom: 22 }; const mapViewInstance = new mapsindoors.mapView.MapboxView(mapViewOptions); const mapsIndoorsInstance = new mapsindoors.MapsIndoors({ mapView: mapViewInstance }); You can configure various options for the mapViewOptions object, such as accessToken, element, center, zoom, and maxZoom to customize the map view."
 }
 
 
-{
-  "input": "How can I change the styling of specific map elements in MapsIndoors with a base map?",
+,{"input": "How can I change the styling of specific map elements in MapsIndoors with a base map?",
   "output": "To change the styling of specific map elements, you can access the base map object from the mapViewInstance. For example, you can use mapViewInstance.getMap().setPaintProperty('MI_POINT_LAYER', 'text-halo-color', '#FFFFFF') to change the halo color of a specific layer on the base map. This interaction allows you to customize the visual style and behavior of the base map in harmony with your MapsIndoors implementation."
 }
 
 
-{
-  "input": "How can I get the current bearing of the map using the MapView object?",
+,{"input": "How can I get the current bearing of the map using the MapView object?",
   "output": "You can get the current bearing of the map by calling the `getBearing()` method on your MapView object. This method will return a number representing the map's current bearing."
 }
 
 
 
-{
-  "input": "How can I retrieve the current pitch of the map using the MapView object?",
+,{"input": "How can I retrieve the current pitch of the map using the MapView object?",
   "output": "To obtain the current pitch of the map, you can use the `getPitch()` method provided by the MapView object. This method returns a number that represents the current pitch of the map."
 }
 
 
 
-{
-  "input": "How do I adjust the rotation (bearing) of the map using the MapView object?",
+,{"input": "How do I adjust the rotation (bearing) of the map using the MapView object?",
   "output": "To change the rotation of the map, you can use the `rotate(rotation)` method on the MapView object, where `rotation` is the desired rotation angle in degrees. This method allows you to adjust the map's orientation."
 }
 
 
 
-{
-  "input": "How can I modify the pitch (tilt) of the map using the MapView object?",
+,{"input": "How can I modify the pitch (tilt) of the map using the MapView object?",
   "output": "To adjust the pitch (tilt) of the map, you can use the `tilt(pitch)` method on the MapView object, with `pitch` being the desired pitch angle in degrees. This method lets you change the perspective of the map."
 }
 
 
 
-{
-  "input": "How can I retrieve all values (key-value pairs) related to the map using the MapView object?",
+,{"input": "How can I retrieve all values (key-value pairs) related to the map using the MapView object?",
   "output": "You can obtain all values as key-value pairs by calling the `getValues()` method on your MapView object. This method returns an object containing various properties and their associated values, providing details about the map's current state."
 }
 
 
 
-{
-  "input": "How can I use classes and methods from Mapbox in conjunction with the MapsIndoors MapView object?",
+,{"input": "How can I use classes and methods from Mapbox in conjunction with the MapsIndoors MapView object?",
   "output": "You can access Mapbox classes and methods by using the `getMap()` method provided by the MapsIndoors MapView object. This method returns the base map object, allowing you to interact directly with Mapbox features. Keep in mind that MapsIndoors may perform various interactions with the map and its layers, so be cautious about potential conflicts when engaging in custom behavior with the base map. Thoroughly test your custom actions if you're making extensive modifications to the map outside of MapsIndoors-specific classes."
 }
 
 
-{
-  "input": "How can I listen to the 'building_changed' event in MapsIndoors?",
+,{"input": "How can I listen to the 'building_changed' event in MapsIndoors?",
   "output": "You can listen to the 'building_changed' event by calling 'mapsIndoors.addListener('building_changed', (building) => {...});'. This event fires when the building focus changes, either by map movement or by calling 'mapsIndoors.fitBuilding(building)'."
 }
 
 
-{
-  "input": "What is the 'building_outline_changed' event in MapsIndoors used for?",
+,{"input": "What is the 'building_outline_changed' event in MapsIndoors used for?",
   "output": "The 'building_outline_changed' event is used to detect when the style for the building outline has changed in MapsIndoors."
 }
 
 
-{
-  "input": "How do you listen to the 'click' event in MapsIndoors?",
+,{"input": "How do you listen to the 'click' event in MapsIndoors?",
   "output": "To listen to the 'click' event, you can use 'mapsIndoors.addListener('click', (location) => {...});'. This event is triggered when a location on the map is clicked."
 }
 
 
 
 
-{
-  "input": "What is the purpose of the 'floor_changed' event in MapsIndoors?",
+,{"input": "What is the purpose of the 'floor_changed' event in MapsIndoors?",
   "output": "The 'floor_changed' event is used to detect when the floor index changes. You can listen to it using 'mapsIndoors.addListener('floor_changed', (floorIndex) => {...});'. The floor index can change through 'mapsIndoors.setFloor(index)' or interaction with the FloorSelector."
 }
 
 
-{
-  "input": "How do you listen to the 'label_options_changed' event in MapsIndoors?",
+,{"input": "How do you listen to the 'label_options_changed' event in MapsIndoors?",
   "output": "To listen to the 'label_options_changed' event, you can use 'mapsIndoors.addListener('label_options_changed', () => {...});'. This event is triggered when the style for labels changes."
 }
 
 
-{
-  "input": "What is the 'mouseenter' event in MapsIndoors used for?",
+,{"input": "What is the 'mouseenter' event in MapsIndoors used for?",
   "output": "The 'mouseenter' event is used when the cursor enters the bounds of a location. You can listen to it with 'mapsIndoors.addListener('mouseenter', (location) => {...});'."
 }
 
 
-{
-  "input": "How can I detect when the cursor leaves the bounds of a location in MapsIndoors?",
+,{"input": "How can I detect when the cursor leaves the bounds of a location in MapsIndoors?",
   "output": "You can use the 'mouseleave' event by listening to 'mapsIndoors.addListener('mouseleave', (location) => {...});'. This event fires when the cursor leaves the bounds of a location."
 }
 
 
-{
-  "input": "What is the purpose of the 'ready' event in MapsIndoors?",
+,{"input": "What is the purpose of the 'ready' event in MapsIndoors?",
   "output": "The 'ready' event is used to signal that MapsIndoors has been initialized and is ready for use. You can listen to it using 'mapsIndoors.addListener('ready', () => {...});'."
 }
 
 
 
 
-{
-  "input": "How can you detect when display rules or locations change and those changes are reflected on the map in MapsIndoors?",
+,{"input": "How can you detect when display rules or locations change and those changes are reflected on the map in MapsIndoors?",
   "output": "You can listen to the 'redraw' event with 'mapsIndoors.addListener('redraw', () => {...});'. This event fires when a display rule or location changes, and those changes are reflected on the map."
 }
 
 
-{
-  "input": "What does the 'zoom_changed' event in MapsIndoors signify?",
+,{"input": "What does the 'zoom_changed' event in MapsIndoors signify?",
   "output": "The 'zoom_changed' event signifies a change in map zoom level. You can listen to it using 'mapsIndoors.addListener('zoom_changed', (zoomLevel) => {...});'. It provides a normalized MapsIndoors zoom level, which is recommended for evaluating DisplayRules due to differences in zoom levels across different map providers."
 }
 
 
 
-{
-  "input": "What event is triggered when a user selects a different floor using the floor selector?",
+,{"input": "What event is triggered when a user selects a different floor using the floor selector?",
   "output": "The 'floor_changed' event is triggered when a user selects a different floor using the floor selector in MapsIndoors."
 }
 
 
-{
-  "input": "How can you use the 'floor_changed' event in MapsIndoors to enhance user experience?",
+,{"input": "How can you use the 'floor_changed' event in MapsIndoors to enhance user experience?",
   "output": "You can use the 'floor_changed' event in MapsIndoors to potentially filter a list view or perform other actions when a user chooses to show a different floor."
 }
 
 
-{
-  "input": "What does the 'mouseenter' event in MapsIndoors relate to?",
+,{"input": "What does the 'mouseenter' event in MapsIndoors relate to?",
   "output": "The 'mouseenter' event in MapsIndoors is related to mouse hover interactions with locations on the map."
 }
 
 
 
-{
-  "input": "How is the 'mouseleave' event in MapsIndoors used?",
+,{"input": "How is the 'mouseleave' event in MapsIndoors used?",
   "output": "The 'mouseleave' event in MapsIndoors is used to detect when the mouse is no longer over a location on the map."
 }
 
 
-{
-  "input": "What does the 'ready' event indicate in MapsIndoors?",
+,{"input": "What does the 'ready' event indicate in MapsIndoors?",
   "output": "The 'ready' event in MapsIndoors indicates that the MapsIndoors library has been initialized and is ready for use."
 }
 
 
 
-{
-  "input": "How can the 'redraw' event be helpful to developers in MapsIndoors?",
+,{"input": "How can the 'redraw' event be helpful to developers in MapsIndoors?",
   "output": "The 'redraw' event in MapsIndoors helps developers understand when changes related to display rules, such as icon or label updates, have taken place successfully on the map."
 }
 
 
 
-{
-  "input": "What does the 'venue_changed' event signify in MapsIndoors?",
+,{"input": "What does the 'venue_changed' event signify in MapsIndoors?",
   "output": "The 'venue_changed' event in MapsIndoors is triggered when a new venue becomes focused in the viewport."
 }
 
 
 
-{
-  "input": "How can the 'zoom_changed' event be used by developers in MapsIndoors?",
+,{"input": "How can the 'zoom_changed' event be used by developers in MapsIndoors?",
   "output": "The 'zoom_changed' event in MapsIndoors can be used for tasks like programmatically handling label collisions or adjusting the size and visibility of icons based on zoom level changes."
 }
 
@@ -438,113 +393,97 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 
 
-{
-  "input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
+,{"input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
   "output": "To create a new instance of MapsIndoors, you can use the constructor 'mapsindoors.MapsIndoors' and provide the required options during initialization."
 }
 
 
-{
-  "input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
+,{"input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
   "output": "The 'mapsIndoorsInstance' represents the main controller for MapsIndoors, allowing you to manage and control various aspects of the map."
 }
 
 
-{
-  "input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
+,{"input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
   "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter."
 }
 
 
-{
-  "input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
+,{"input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
   "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more."
 }
 
 
 
-{
-  "input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
+,{"input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
   "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style."
 }
 
 
 
-{
-  "input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
+,{"input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
   "output": "To create a new instance of MapsIndoors, you can use the constructor 'mapsindoors.MapsIndoors' and provide the required options during initialization.",
   "code": "const mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance\n});"
 }
 
 
 
-{
-  "input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
+,{"input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
   "output": "The 'mapsIndoorsInstance' represents the main controller for MapsIndoors, allowing you to manage and control various aspects of the map.",
   "code": "// 'mapsIndoorsInstance' is the main controller for MapsIndoors\nconst mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance\n});"
 }
 
 
 
-{
-  "input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
+,{"input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
   "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter. It's the MapsIndoors instance that will set the floor via the setFloor method. It requires the floor index to be passed as the single argument of this method.",
   "code": "// Change the floor using 'setFloor'\nmapsIndoorsInstance.setFloor(2) or you can use setFloor against location.properties.floor;"
 }
 
 
 
-{
-  "input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
+,{"input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
   "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
   "code": "// Modify label options using 'setLabelOptions'\nconst labelOptions = {\n    style: {\n        align: 'left',\n        color: '#FF5733',\n        fontFamily: 'Arial, sans-serif',\n        fontSize: '14px',\n        fontWeight: 600\n    }\n};\nmapsIndoorsInstance.setLabelOptions(labelOptions);"
 }
 
 
 
-{
-  "input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
+,{"input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
   "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
   "code": "// Example of customizing label options\nconst customLabelOptions = {\n    style: {\n        align: 'center',\n        color: '#007BFF',\n        fontFamily: 'Arial, Helvetica, sans-serif',\n        fontSize: '16px',\n        fontWeight: 700,\n        strokeStyle: '#000',\n        strokeWeight: 2\n    }\n};\nmapsIndoorsInstance.setLabelOptions(customLabelOptions);"
 }
 
 
-
-{
+,
 "input": "How can I change the icon for specific types or locations at runtime in MapsIndoors?",
 "output": "To change the icon for specific types or locations at runtime in MapsIndoors, you can use the mapsIndoorsInstance.setDisplayRule method. This method allows you to define a custom display rule that includes the icon and other properties. You can apply this rule to one or more locations by providing their IDs in an array. Here's an example of how to do it:",
 "code": "// Example: Changing the icon for specific locations\nconst locationIds = [\n '3ee585cd801d47e5b8c4d66a',\n '437265b21c6047d2aff066b7',\n '09d96b96e77a4d8ab8a29352'\n];\n\nconst customDisplayRule = {\n polygonVisible: true,\n polygonFillColor: '#90ee90',\n polygonFillOpacity: 1,\n polygonZoomFrom: 16,\n polygonZoomTo: 22,\n visible: true,\n icon: 'custom_meeting_room_icon.png'\n};\n\nmapsIndoorsInstance.setDisplayRule(locationIds, customDisplayRule);"
 }
 
-{
-  "input": "What are MapsIndoors locations and what can I do with them?",
+,{"input": "What are MapsIndoors locations and what can I do with them?",
   "output": "MapsIndoors locations are versatile data points representing specific geographical spots. They can be offices, exhibitors, or room features like firehoses, coffee machines, and TVs. Referred to as 'Locations,' 'Places,' or 'POIs' interchangeably, MapsIndoors uses 'Locations' to define these points. These locations have properties such as ID, type, geometry (in GeoJSON format), aliases, anchor, building, categories, description, display rule, and more. You can interact with these locations using the MapsIndoors SDK through the 'MapsIndoors' class and its 'setDisplayRule' method. This method enables customization of display rules for one or multiple locations, allowing settings like polygon visibility, fill color, and custom icons."
 }
 
 
-{
-  "input": "How can I adjust the icon size when a user hovers over a location in MapsIndoors?",
+,{"input": "How can I adjust the icon size when a user hovers over a location in MapsIndoors?",
   "output": "You can adjust the icon size when a user hovers over a location by specifying the 'iconScale' property in the DisplayRule for that location.",
   "code": "// Example: Increasing icon size on hover\nconst hoverDisplayRule = {\n    iconScale: 1.2\n};\nmapsIndoorsInstance.setDisplayRule(locationId, hoverDisplayRule);"
 }
 
 
 
-{
-  "input": "How can I make location labels visible only at specific zoom levels in MapsIndoors?",
+,{"input": "How can I make location labels visible only at specific zoom levels in MapsIndoors?",
   "output": "You can control the visibility of location labels at different zoom levels by setting the 'labelZoomFrom' and 'labelZoomTo' properties in the DisplayRule for those locations.",
   "code": "// Example: Display labels between zoom levels 16 to 18\nconst labelDisplayRule = {\n    labelZoomFrom: 16,\n    labelZoomTo: 18\n};\nmapsIndoorsInstance.setDisplayRule(locationId, labelDisplayRule);"
 }
 
 
-{
-  "input": "How can I hide the polygon for a specific type when zoomed out in MapsIndoors?",
+,{"input": "How can I hide the polygon for a specific type when zoomed out in MapsIndoors?",
   "output": "You can hide the polygon for a specific type when zoomed out by configuring the 'polygonVisible,' 'polygonZoomFrom,' and 'polygonZoomTo' properties in the DisplayRule for that type.",
   "code": "// Example: Hiding the polygon when zoomed out\nconst hidePolygonDisplayRule = {\n    polygonVisible: false,\n    polygonZoomFrom: 16,\n    polygonZoomTo: 18\n};\nmapsIndoorsInstance.setDisplayRule('building', hidePolygonDisplayRule);"
 }
 
-
-{
+,
 "input": "What kinds of properites can be modified within a display rule?",
 "output": "
 displayRule: {
@@ -605,6 +544,4 @@ displayRule: {
         heightMeters": 0,
         bearing":0
     }
-}"
-
-
+}"]
