@@ -567,14 +567,14 @@ displayRule: {
       "geometry": "Defines the spatial aspects of the location, including coordinates and type. Will be a Point or Polygon, and the structure of the geometry property data will depend on that.",
       "properties": "Contains various attributes and custom properties of the location.",
       "properties.aliases": "Alternate names or identifiers for the location, generally used as a search query field.",
-      "properties.anchor": "Specifies a point (lat, lng) where the icon/label is presented.",
+      "properties.anchor": "Specifies a point (lat, lng) where the icon/label is presented. This is very useful for determining where to place a popup or info window.",
       "properties.building": "The building in which the location is situated.",
       "properties.categories": "Categories assigned to the location, usually in the CMS.",
       "properties.description": "A text description providing additional information about the location.",
-      "properties.displayRule": "Rules affecting the visual representation of the location.",
+      "properties.displayRule": "Rules affecting the visual representation of the location. You should use the interface called Display Rule for a list of its properties and use mapsIndoorsInstance to modify the display rule at runtime.",
       "properties.externalId": "An optional external identifier for the location.",
       "properties.fields": "Custom properties defined for the location.",
-      "properties.floor": "The floor index (from MapsIndoors CMS) on which the location is situated.",
+      "properties.floor": "The floor index (from MapsIndoors CMS) on which the location is situated. You need to use your mapsIndoorsInstance.setFloor to change the maps floor for the end user.",
       "properties.floorName": "The name of the floor, typically presented in the floor selector.",
       "properties.imageURL": "A URL linking to an image related to the location.",
       "properties.locationType": "The location type or display type name from the MapsIndoors CMS or Integration API.",
@@ -584,6 +584,8 @@ displayRule: {
       "properties.venue": "The venue in which the location is placed."
    }
  },
+
+
 
 
 ]
