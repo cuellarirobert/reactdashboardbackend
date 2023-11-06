@@ -12,25 +12,6 @@ mapsindoors.services.LocationsService.getLocationsByExternalId(array of external
 });"
 }
 
-,{"input": "Get Locations by Custom IDs and Display on a Map",
-  "output": "const myCustomIds = ['item1', 'item2', 'item3'];  These IDs must be stored on MapsIndoors locations for this service to return any data. 
-
-myCustomIds.forEach(customId => {
-  mapsindoors.services.LocationsService.getLocationsByExternalId([array of external IDs]).then(locations => {
-    if (locations.length > 0) {
-      const location = locations[0]; // Assuming the first location is relevant
-
-      // Optionally set the floor and center the map
-      mapsIndoorsInstance.setFloor(location.properties.floor);
-      mapInstance.setCenter({
-        lat: location.properties.anchor.coordinates[1],
-        lng: location.properties.anchor.coordinates[0]
-      });
-    }
-  });
-});"
-}
-
 ,{"input": "Highlight Locations by Custom IDs on the Map",
   "output": "const myCustomIds = ['item1', 'item2', 'item3'];
 
@@ -584,6 +565,18 @@ displayRule: {
       "properties.venue": "The venue in which the location is placed."
    }
  },
+{
+   "Question": "Get Locations by Custom IDs and Locate on a Map",
+   "Answer": "To get locations by custom IDs and locate them on a map, you can follow these steps:",
+   "Context": {
+      "Step 1": "Create an array of your custom IDs. For example, const myCustomIds = ['item1', 'item2', 'item3']; These IDs must be stored on MapsIndoors locations on the external ID property for this service to return any data.",
+      "Step 2": "Iterate through your custom IDs using a forEach loop. For each custom ID, use the 'mapsindoors.services.LocationsService.getLocationsByExternalId' method to fetch the corresponding locations. Replace '[array of external IDs]' with your custom ID array.",
+      "Step 3": "Check if any locations are returned. If the 'locations.length' is greater than 0, you can assume that data is available.",
+      "Step 4": "Assuming the first location in the 'locations' array is relevant, retrieve it as 'location'. You can then optionally set the floor and center the map based on this location's information.",
+      "Step 5": "Use 'mapsIndoorsInstance.setFloor(location.properties.floor)' or a known floor index to set the floor if they are all on the same floor, and 'mapInstance.setCenter' to center the map based on the location's anchor coordinates, or you may wish to find another way to center the map with some other data.",
+      "Step 6": "If you wish, you may also set the zoom level if you know there are many locations spread over a larger distance with 'mapsIndoorsInstance.setZoom(FLOAT)' like 'setZoom(19.5)'"
+   }
+},
 
 
 
