@@ -541,3 +541,67 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 }
 
 
+{
+"input": "What kinds of properites can be modified within a display rule?",
+"output": "
+displayRule: {
+    visible: true,
+    iconVisible: true,
+    zoomFrom: 16.0,
+    zoomTo: 22.0,
+    icon: "https://app.mapsindoors.com/mapsindoors/cms/assets/icons/misc/default-marker.png?71488",
+    iconScale: 1.0,
+    iconSize: {
+        width: 20.0,
+        height: 20.0
+    },
+    labelVisible: true,
+    label: '{{name}}',
+    labelZoomFrom: 16.0,
+    labelZoomTo: 22.0,
+    labelMaxWidth: 0, //0 means infinite eg lines will not be broken based on width
+    polygon: {
+        visible": false,
+        zoomFrom": 18,
+        zoomTo": 22,
+        strokeWidth": 2.0,
+        strokeColor": '#3071D9',
+        strokeOpacity": 1.0,
+        fillColor": '#3071D9',
+        fillOpacity": 0.2
+    },
+    walls: { 
+        visible": true,
+        color": '#707a89',
+        height": 2.0,
+        zoomFrom": 16.0,
+        zoomTo": 22.0
+    },
+    extrusion: {
+        visible: true,
+        color: '#aeb9cb',
+        height: 2.25,
+        zoomFrom: 16.0,
+        zoomTo: 22.0
+    },
+    model3D: { 
+        visible: true,
+        zoomFrom: 16.0,
+        zoomTo: 22.0,
+        model: null,
+        rotationX: 0.0,
+        rotationY: 0.0,
+        rotationZ: 0.0
+    },
+    model2D: {
+        visible": true,
+        zoomFrom": 16.0,
+        zoomTo": 22.0,
+        model": null,
+        widthMeters": 0,
+        heightMeters": 0,
+        bearing":0
+    }
+}"
+
+
