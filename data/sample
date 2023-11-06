@@ -488,7 +488,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 {
   "input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
-  "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter.",
+  "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter. It's the MapsIndoors instance that will set the floor via the setFloor method. It requires the floor index to be passed as the single argument of this method.",
   "code": "// Change the floor using 'setFloor'\nmapsIndoorsInstance.setFloor(2) or you can use setFloor against location.properties.floor;"
 }
 
@@ -496,7 +496,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 {
   "input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
-  "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more.",
+  "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
   "code": "// Modify label options using 'setLabelOptions'\nconst labelOptions = {\n    style: {\n        align: 'left',\n        color: '#FF5733',\n        fontFamily: 'Arial, sans-serif',\n        fontSize: '14px',\n        fontWeight: 600\n    }\n};\nmapsIndoorsInstance.setLabelOptions(labelOptions);"
 }
 
@@ -504,7 +504,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 {
   "input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
-  "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style.",
+  "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
   "code": "// Example of customizing label options\nconst customLabelOptions = {\n    style: {\n        align: 'center',\n        color: '#007BFF',\n        fontFamily: 'Arial, Helvetica, sans-serif',\n        fontSize: '16px',\n        fontWeight: 700,\n        strokeStyle: '#000',\n        strokeWeight: 2\n    }\n};\nmapsIndoorsInstance.setLabelOptions(customLabelOptions);"
 }
 
@@ -513,7 +513,7 @@ mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
 
 {
   "input": "How can I change the icon for specific types or locations at runtime in MapsIndoors?",
-  "output": "You can modify the icon for specific types or locations by setting a custom 'icon' URL in the DisplayRule for those types or locations.",
+  "output": "You can modify the icon for specific types or locations by setting a custom 'icon' URL in the DisplayRule for those types or locations. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
   "code": "// Example: Changing the icon for 'meeting_room' type\nconst customDisplayRule = {\n    icon: 'custom_meeting_room_icon.png'\n};\nmapsIndoorsInstance.setDisplayRule('meeting_room', customDisplayRule);"
 }
 
