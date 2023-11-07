@@ -13,151 +13,154 @@
     "Code": "['id1', 'id2'].forEach(id => {\n  mapsIndoors.services.LocationsService.getLocationsByExternalId([id]).then(locs => {\n    if (locs.length) mapsIndoorsInstance.setHighlight(locs[0].id, true);\n  });\n});"
   }
 },
-
-
-
-
-
-
-,{"input": "Search for mapsindoors locations by name using getLocations service",
-  "output": "mapsindoors.services.LocationsService.getLocations({ q: 'Conference Room' }).then(locations => {
-    // Handle the array of locations with names containing 'Conference Room'
-  });
-  "
-}
-
-,{"input": "Filter mapsindoors locations by mapsindoors categories using getLocations service",
-  "output": "const categories = ['Meeting Room', 'Office'];
-mapsindoors.services.LocationsService.getLocations({ categories }).then(locations => {
-  // Handle the array of locations in the specified categories
-});
-"
-}
-
-,{"input": "Search for mapsindoors locations in a specific venue",
-  "output": "mapsindoors.services.LocationsService.getLocations({
-    venue: 'Venue123'
-  }).then(locations => {
-    // Handle the array of locations in 'Venue123'
-  });
-  "
-}
-
-
-
-,{"input": "Sort locations by a specific property in descending order",
-  "output": "mapsindoors.services.LocationsService.getLocations({
-    orderBy: 'capacity',
-    sortOrder: 'DESC'
-  }).then(locations => {
-    // Handle the array of locations sorted by capacity in descending order
-  });
-  "
-}
-
-
-
-
-,{"input": "Get the location when a user clicks on a UI card",
-  "output": "const locationId = '5666f75bc1843a08b81bef72'; // You get this ID from a UI card click event
-mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
-  // Handle the location data
-});
-"
-}
-
-
-
-,{"input": "Get location details when a user selects a location from a list",
-  "output": "const locationId = '7865a75bc1843a08b81cde45'; // You get this ID from a user's selection in a list
-mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
-  // Handle the location data
-});
-"
-}
-
-
-
-,{"input": "Retrieve location details based on user interaction",
-  "output": "const locationId = '9097f75bc1843a08b81dfe27'; // You obtain this ID from a user's interaction
-mapsindoors.services.LocationsService.getLocation(locationId).then(location => {
-  // Handle the location data
-});
-"
-}
-
-,{"input": "Access a custom property with the `getFieldForKey` method.",
-  "output": {
-    "method": "mapsindoors.services.LocationsService.getFieldForKey(key) → Field",
-    "description": "Get data for a custom property with the provided key, regardless of casing."
+{
+  "Question": "How to search for MapsIndoors locations by name?",
+  "Answer": "Use the 'getLocations' service with the query parameter to search for locations by name.",
+  "Context": {
+    "Code": "mapsIndoors.services.LocationsService.getLocations({ q: 'Name' }).then(locations => {\n  // locations with matching names\n});"
   }
-}
-
-
-,{"input": "Access a custom property with the key 'wikipage'.",
-  "output": "const wikipageValue = mapsindoors.services.LocationsService.getFieldForKey('wikipage').value;\nconsole.log(wikipageValue);"
-}
-
-
-,{"input": "Access a custom property with the key 'customField'.",
-  "output": "const customFieldValue = mapsindoors.services.LocationsService.getFieldForKey('customField').value;\nconsole.log(customFieldValue);"
-}
-
-
-,{"input": "Use the custom field in an example.",
-  "output": "const infoWindowContent = `\n  <img src=\"${location.properties.imageURL}\" alt=\"${location.properties.description}\" width=\"100\" height=\"100\" />\n  <h2><a href=\"${location.properties.fields.wikipage.value}\" target=\"_blank\">${location.properties.name}</a></h2>\n`;"
-}
-
-
-,{"input": "How can I include the MapsIndoors Web SDK in my project and add dependencies for using MapsIndoors with a base map?",
-  "output": "To include the MapsIndoors Web SDK, add the following script tag to your HTML: <script src='https://app.mapsindoors.com/mapsindoors/js/sdk/4.25.0/mapsindoors-4.25.0.js.gz'></script>. For a base map like Mapbox, you'll also need a Mapbox access token and should include these script and link tags: <script src='https://app.mapsindoors.com/mapsindoors/js/sdk/4.24.8/mapsindoors-4.24.8.js.gz?apikey=YOUR_MAPSINDOORS_API_KEY'></script> <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script> <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'."
-}
-
-
-
-,{"input": "How do I create a map using MapsIndoors with a base map like Mapbox, and what options can I configure for the map view?",
-  "output": "To create a map using MapsIndoors with Mapbox, you can use JavaScript code like this: const mapViewOptions = { accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN', element: document.getElementById('map'), center: { lat: 38.8974905, lng: -77.0362723 }, zoom: 17, maxZoom: 22 }; const mapViewInstance = new mapsindoors.mapView.MapboxView(mapViewOptions); const mapsIndoorsInstance = new mapsindoors.MapsIndoors({ mapView: mapViewInstance }); You can configure various options for the mapViewOptions object, such as accessToken, element, center, zoom, and maxZoom to customize the map view."
-}
-
-
-,{"input": "How can I change the styling of specific map elements in MapsIndoors with a base map?",
-  "output": "To change the styling of specific map elements, you can access the base map object from the mapViewInstance. For example, you can use mapViewInstance.getMap().setPaintProperty('MI_POINT_LAYER', 'text-halo-color', '#FFFFFF') to change the halo color of a specific layer on the base map. This interaction allows you to customize the visual style and behavior of the base map in harmony with your MapsIndoors implementation."
-}
-
-
-,{"input": "How can I get the current bearing of the map using the MapView object?",
-  "output": "You can get the current bearing of the map by calling the `getBearing()` method on your MapView object. This method will return a number representing the map's current bearing."
-}
-
-
-
-,{"input": "How can I retrieve the current pitch of the map using the MapView object?",
-  "output": "To obtain the current pitch of the map, you can use the `getPitch()` method provided by the MapView object. This method returns a number that represents the current pitch of the map."
-}
-
-
-
-,{"input": "How do I adjust the rotation (bearing) of the map using the MapView object?",
-  "output": "To change the rotation of the map, you can use the `rotate(rotation)` method on the MapView object, where `rotation` is the desired rotation angle in degrees. This method allows you to adjust the map's orientation."
-}
-
-
-
-,{"input": "How can I modify the pitch (tilt) of the map using the MapView object?",
-  "output": "To adjust the pitch (tilt) of the map, you can use the `tilt(pitch)` method on the MapView object, with `pitch` being the desired pitch angle in degrees. This method lets you change the perspective of the map."
-}
-
-
-
-,{"input": "How can I retrieve all values (key-value pairs) related to the map using the MapView object?",
-  "output": "You can obtain all values as key-value pairs by calling the `getValues()` method on your MapView object. This method returns an object containing various properties and their associated values, providing details about the map's current state."
-}
-
-
-
-,{"input": "How can I use classes and methods from Mapbox in conjunction with the MapsIndoors MapView object?",
-  "output": "You can access Mapbox classes and methods by using the `getMap()` method provided by the MapsIndoors MapView object. This method returns the base map object, allowing you to interact directly with Mapbox features. Keep in mind that MapsIndoors may perform various interactions with the map and its layers, so be cautious about potential conflicts when engaging in custom behavior with the base map. Thoroughly test your custom actions if you're making extensive modifications to the map outside of MapsIndoors-specific classes."
-}
+},
+{
+  "Question": "How to filter MapsIndoors locations by category?",
+  "Answer": "Invoke 'getLocations' with a categories filter to retrieve locations that match certain categories.",
+  "Context": {
+    "Code": "mapsIndoors.services.LocationsService.getLocations({ categories: ['Category1', 'Category2'] }).then(locations => {\n  // locations in specified categories\n});"
+  }
+},
+{
+  "Question": "How do I find MapsIndoors locations within a specific venue?",
+  "Answer": "Use the 'getLocations' service and filter by 'venue' to find locations within a particular venue.",
+  "Context": {
+    "Code": "mapsIndoors.services.LocationsService.getLocations({ venue: 'VenueID' }).then(locations => {\n  // locations in 'VenueID'\n});"
+  }
+},
+{
+  "Question": "How to sort MapsIndoors locations by a property in descending order?",
+  "Answer": "Use 'getLocations' with 'orderBy' and 'sortOrder' to sort locations by a specific property.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocations({ orderBy: 'Property', sortOrder: 'DESC' }).then(locations => {\n  // Sorted locations\n});"
+  }
+},
+{
+  "Question": "How to fetch a MapsIndoors location based on a UI card click?",
+  "Answer": "Retrieve a location's details using its ID, which is obtained from a UI card click event.",
+  "Context": {
+    "Code": "const locationId = 'LocationID'; // ID from UI card click\nmapsindoors.services.LocationsService.getLocation(locationId).then(location => {\n  // Location data\n});"
+  }
+},
+{
+  "Question": "How do I obtain details of a location selected from a list?",
+  "Answer": "Fetch the location details by passing the selected location's ID to the 'getLocation' method.",
+  "Context": {
+    "Code": "const locationId = 'ListSelectionID';\nmapsindoors.services.LocationsService.getLocation(locationId).then(location => {\n  // Process location data\n});"
+  }
+},
+{
+  "Question": "How to retrieve location details after user interaction?",
+  "Answer": "Acquire location details using the 'getLocation' method with an ID gained from user interaction.",
+  "Context": {
+    "Code": "const locationId = 'UserInteractionID';\nmapsindoors.services.LocationsService.getLocation(locationId).then(location => {\n  // Process location data\n});"
+  }
+},
+{
+  "Question": "How do I access a custom property in MapsIndoors?",
+  "Answer": "Retrieve a custom property's data using `getFieldForKey` with the property key.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getFieldForKey('YourKey') → Field",
+    "Note": "Replace 'YourKey' with the actual key name of the custom property you want to access."
+  }
+},
+{
+  "Question": "How to get the value of the 'wikipage' custom property?",
+  "Answer": "Use `getFieldForKey` passing 'wikipage' to obtain its value.",
+  "Context": {
+    "Code": "const wikipageValue = mapsindoors.services.LocationsService.getFieldForKey('wikipage').value;\nconsole.log(wikipageValue);"
+  }
+},
+{
+  "Question": "How to retrieve the value of a 'customField' property?",
+  "Answer": "Fetch the 'customField' value with `getFieldForKey`.",
+  "Context": {
+    "Code": "const customFieldValue = mapsindoors.services.LocationsService.getFieldForKey('customField').value;\nconsole.log(customFieldValue);"
+  }
+},
+{
+  "Question": "How do I use a custom field in MapsIndoors?",
+  "Answer": "Construct content strings using the custom field values from a location object.",
+  "Context": {
+    "Code": "const infoWindowContent = `<img src=\"${location.properties.imageURL}\" alt=\"Location Image\" />\n<h2><a href=\"${location.properties.fields.wikipage.value}\" target=\"_blank\">${location.properties.name}</a></h2>`;"
+  }
+},
+{
+  "Question": "How do I include the MapsIndoors Web SDK and Mapbox dependencies in my project?",
+  "Answer": "Add the MapsIndoors and Mapbox script and stylesheet links to your HTML. Use your MapsIndoors API key and Mapbox access token where required.",
+  "Context": {
+    "IncludeSDK": {
+      "Code": "<script src='https://app.mapsindoors.com/mapsindoors/js/sdk/mapsindoors-x.x.x.js.gz?apikey=YOUR_API_KEY'></script>"
+    },
+    "IncludeMapbox": {
+      "Code": "<script src='https://api.mapbox.com/mapbox-gl-js/vx.x.x/mapbox-gl.js'></script>\n<link href='https://api.mapbox.com/mapbox-gl-js/vx.x.x/mapbox-gl.css' rel='stylesheet' />",
+      "Note": "Replace 'x.x.x' with the version numbers and 'YOUR_API_KEY' with your actual API key."
+    }
+  }
+},
+{
+  "Question": "How to create a MapsIndoors map with Mapbox and configure its options?",
+  "Answer": "Initialize a MapboxView with your Mapbox access token and other map options, then create a MapsIndoors instance with this view.",
+  "Context": {
+    "Code": "const mapViewOptions = { accessToken: 'YOUR_TOKEN', element: 'mapElement', center: { lat: 38.8977, lng: -77.0365 }, zoom: 17, maxZoom: 22 };\nconst mapView = new mapsindoors.mapView.MapboxView(mapViewOptions);\nnew mapsindoors.MapsIndoors({ mapView });"
+  }
+},
+{
+  "Question": "How do I style map elements in MapsIndoors with Mapbox?",
+  "Answer": "Alter map element styles by accessing the Mapbox object via MapView and using 'setPaintProperty' for layer styling.",
+  "Context": {
+    "Code": "mapViewInstance.getMap().setPaintProperty('LAYER_ID', 'PROPERTY_NAME', 'VALUE');"
+  }
+},
+{
+  "Question": "How to get the map's current bearing using MapsIndoors?",
+  "Answer": "Retrieve the map's bearing with 'getBearing()' on the MapView instance.",
+  "Context": {
+    "Code": "const bearing = mapViewInstance.getBearing();"
+  }
+},
+{
+  "Question": "How do I find the map's pitch with MapsIndoors?",
+  "Answer": "Use 'getPitch()' on the MapView instance to get the current pitch of the map.",
+  "Context": {
+    "Code": "const pitch = mapViewInstance.getPitch();"
+  }
+},
+{
+  "Question": "How to adjust the map's bearing using MapView?",
+  "Answer": "Rotate the map with the 'rotate' method on MapView, passing in the angle in degrees.",
+  "Context": {
+    "Code": "mapViewInstance.rotate(desiredAngle);"
+  }
+},
+{
+  "Question": "How do I change the map's pitch with MapView?",
+  "Answer": "Modify the map's tilt using the 'tilt' method on MapView, inputting the pitch in degrees.",
+  "Context": {
+    "Code": "mapViewInstance.tilt(desiredPitch);"
+  }
+},
+{
+  "Question": "How can I get all key-value pairs for the map from MapView?",
+  "Answer": "Retrieve all map-related values using the 'getValues' method on MapView.",
+  "Context": {
+    "Code": "const mapValues = mapViewInstance.getValues();"
+  }
+},
+{
+  "Question": "How to use Mapbox features with MapsIndoors MapView?",
+  "Answer": "Access the underlying Mapbox map with 'getMap' from MapView for Mapbox functionality.",
+  "Context": {
+    "Code": "const mapboxMap = mapViewInstance.getMap();",
+    "Note": "Ensure compatibility with MapsIndoors when using Mapbox methods directly."
+  }
+},
 
 
 
