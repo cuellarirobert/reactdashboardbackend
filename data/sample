@@ -541,15 +541,60 @@
     "Note": "Refer to Mapbox for valid pitch (0-85 degrees) and bearing values."
   }
 },
-
-
-
-
-
-
-
-
-
-
-
+{
+  "Question": "How can I center my map on a specific MapsIndoors location?",
+  "Answer": "Retrieve the location using 'getLocation' by ID and use its 'anchor.coordinates' to center the map.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocation('locationId').then(location => {\n  const center = location.properties.anchor.coordinates;\n  mapViewInstance.setCenter({ lat: center[1], lng: center[0] });\n});"
+  }
+},
+{
+  "Question": "How do I change the display icon for a MapsIndoors location?",
+  "Answer": "Fetch the location by ID and apply a 'setDisplayRule' to change its icon.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocation('locationId').then(location => {\n  const customDisplayRule = { icon: 'newIconUrl' };\n  mapsIndoorsInstance.setDisplayRule(location.id, customDisplayRule);\n});"
+  }
+},
+{
+  "Question": "How to access and use metadata from a MapsIndoors location in my app?",
+  "Answer": "Use 'getLocation' to obtain the location object and access its metadata for application-specific purposes.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocation('locationId').then(location => {\n  const metadata = location.properties.fields.customField;\n  // Use metadata as needed in your app\n});"
+  }
+},
+{
+  "Question": "How do you find MapsIndoors locations using external IDs?",
+  "Answer": "Use 'getLocationsByExternalId' to fetch locations matching specific external IDs.",
+  "Context": {
+    "Code": "const ids = ['extId1', 'extId2'];\nmapsindoors.services.LocationsService.getLocationsByExternalId(ids).then(locations => { /* handle locations */ });"
+  }
+},
+{
+  "Question": "What method searches for MapsIndoors locations on a specific floor?",
+  "Answer": "To search locations on a particular floor, call 'getLocations' with the 'floor' parameter.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocations({ floor: '5' }).then(locations => { /* handle locations */ });"
+  }
+},
+{
+  "Question": "How can you perform a text search for MapsIndoors locations?",
+  "Answer": "Execute a text search using 'getLocations' with the 'q' parameter for query strings.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocations({ q: 'Conference' }).then(locations => { /* handle locations */ });"
+  }
+},
+{
+  "Question": "How to sort MapsIndoors location search results by a property?",
+  "Answer": "Sort search results by specifying 'orderBy' and 'sortOrder' in the 'getLocations' method.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocations({ orderBy: 'name', sortOrder: 'ASC' }).then(locations => { /* handle sorted locations */ });"
+  }
+},
+{
+  "Question": "How do you limit MapsIndoors search results to a specific category?",
+  "Answer": "Filter search results by category using the 'categories' parameter in 'getLocations'.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocations({ categories: ['Cafe'] }).then(locations => { /* handle category-specific locations */ });"
+  }
+},
 ]
