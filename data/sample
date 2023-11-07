@@ -597,4 +597,25 @@
     "Code": "mapsindoors.services.LocationsService.getLocations({ categories: ['Cafe'] }).then(locations => { /* handle category-specific locations */ });"
   }
 },
+{
+  "Question": "What are the steps to embed a MapsIndoors map into my website?",
+  "Answer": "Embedding a MapsIndoors map involves loading the MapsIndoors and Mapbox libraries, initializing the Mapbox map, creating a MapsIndoors MapView instance, and then initializing the MapsIndoors instance with that view.",
+  "Context": {
+    "Code": "/* Include Mapbox and MapsIndoors SDKs in your HTML first */\nconst mapViewOptions = { accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN', element: document.getElementById('map'), center: { lat: 38.8974905, lng: -77.0362723 }, zoom: 17, maxZoom: 22 };\nconst mapView = new mapsindoors.mapView.MapboxView(mapViewOptions);\nconst mapsIndoors = new mapsindoors.MapsIndoors({ mapView });"
+  }
+},
+{
+  "Question": "How can I initialize a MapsIndoors map inside a specific div on my web page?",
+  "Answer": "Initialize a MapboxView with MapsIndoors by referencing your div's ID, then use it to instantiate a MapsIndoors object.",
+  "Context": {
+    "Code": "/* Make sure the div with id='map' exists in your HTML */\nconst mapViewOptions = { accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN', element: document.getElementById('map') /* ... other options ... */ };\nconst mapsIndoors = new mapsindoors.MapsIndoors({ mapView: new mapsindoors.mapView.MapboxView(mapViewOptions) });"
+  }
+},
+{
+  "Question": "Can you guide me through setting up a MapsIndoors map on my HTML page?",
+  "Answer": "Sure, start by including the SDK scripts. Then, create a MapboxView and a MapsIndoors instance, specifying your div container and other map options.",
+  "Context": {
+    "Code": "/* SDK scripts should be added in HTML */\nconst mapElement = document.getElementById('map'); // Your map container div\nconst mapView = new mapsindoors.mapView.MapboxView({ accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN', element: mapElement, /* ... */ });\nconst mapsIndoors = new mapsindoors.MapsIndoors({ mapView });"
+  }
+},
 ]
