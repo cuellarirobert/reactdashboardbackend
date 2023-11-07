@@ -161,162 +161,113 @@
     "Note": "Ensure compatibility with MapsIndoors when using Mapbox methods directly."
   }
 },
-
-
-
-
-,{"input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
-  "output": "To create a new instance of MapsIndoors, you can use the constructor 'mapsindoors.MapsIndoors' and provide the required options during initialization."
-}
-
-
-,{"input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
-  "output": "The 'mapsIndoorsInstance' represents the main controller for MapsIndoors, allowing you to manage and control various aspects of the map."
-}
-
-
-,{"input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
-  "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter."
-}
-
-
-,{"input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
-  "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more."
-}
-
-
-
-,{"input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
-  "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style."
-}
-
-
-
-,{"input": "How can you create a new instance of MapsIndoors in your JavaScript code?",
-  "output": "To create a new instance of MapsIndoors, you can use the constructor 'mapsindoors.MapsIndoors' and provide the required options during initialization.",
-  "code": "const mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance\n});"
-}
-
-
-
-,{"input": "What does the 'mapsIndoorsInstance' represent when you create it using 'new mapsindoors.MapsIndoors({...})'?",
-  "output": "The 'mapsIndoorsInstance' represents the main controller for MapsIndoors, allowing you to manage and control various aspects of the map.",
-  "code": "// 'mapsIndoorsInstance' is the main controller for MapsIndoors\nconst mapsIndoorsInstance = new mapsindoors.MapsIndoors({\n    mapView: mapViewInstance\n});"
-}
-
-
-
-,{"input": "How can you change the floor in MapsIndoors using the 'setFloor' method?",
-  "output": "You can change the floor in MapsIndoors by calling the 'setFloor' method and providing the 'floor' index as a parameter. It's the MapsIndoors instance that will set the floor via the setFloor method. It requires the floor index to be passed as the single argument of this method.",
-  "code": "// Change the floor using 'setFloor'\nmapsIndoorsInstance.setFloor(2) or you can use setFloor against location.properties.floor;"
-}
-
-
-
-,{"input": "What kind of options can be modified using the 'setLabelOptions' method in MapsIndoors?",
-  "output": "The 'setLabelOptions' method in MapsIndoors allows you to modify label options, including aspects like label alignment, color, font style, size, and more. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
-  "code": "// Modify label options using 'setLabelOptions'\nconst labelOptions = {\n    style: {\n        align: 'left',\n        color: '#FF5733',\n        fontFamily: 'Arial, sans-serif',\n        fontSize: '14px',\n        fontWeight: 600\n    }\n};\nmapsIndoorsInstance.setLabelOptions(labelOptions);"
-}
-
-
-
-,{"input": "Provide an example of customizing label options in MapsIndoors using the 'setLabelOptions' method.",
-  "output": "For example, you can customize label options by changing parameters such as alignment, color, font, size, and stroke style to create a custom label style. It's the MapsIndoors instance that has a method called 'setDisplayRule' and it must make the action of setting the display rule. It will have a target of objects, e.g. a single location or an array of locations, and a display rule. Together the MapsIndoors instance will apply the display rule to those targets.",
-  "code": "// Example of customizing label options\nconst customLabelOptions = {\n    style: {\n        align: 'center',\n        color: '#007BFF',\n        fontFamily: 'Arial, Helvetica, sans-serif',\n        fontSize: '16px',\n        fontWeight: 700,\n        strokeStyle: '#000',\n        strokeWeight: 2\n    }\n};\nmapsIndoorsInstance.setLabelOptions(customLabelOptions);"
-}
-
-
-,
-"input": "How can I change the icon for specific types or locations at runtime in MapsIndoors?",
-"output": "To change the icon for specific types or locations at runtime in MapsIndoors, you can use the mapsIndoorsInstance.setDisplayRule method. This method allows you to define a custom display rule that includes the icon and other properties. You can apply this rule to one or more locations by providing their IDs in an array. Here's an example of how to do it:",
-"code": "// Example: Changing the icon for specific locations\nconst locationIds = [\n '3ee585cd801d47e5b8c4d66a',\n '437265b21c6047d2aff066b7',\n '09d96b96e77a4d8ab8a29352'\n];\n\nconst customDisplayRule = {\n polygonVisible: true,\n polygonFillColor: '#90ee90',\n polygonFillOpacity: 1,\n polygonZoomFrom: 16,\n polygonZoomTo: 22,\n visible: true,\n icon: 'custom_meeting_room_icon.png'\n};\n\nmapsIndoorsInstance.setDisplayRule(locationIds, customDisplayRule);"
-}
-
-,{"input": "What are MapsIndoors locations and what can I do with them?",
-  "output": "MapsIndoors locations are versatile data points representing specific geographical spots. They can be offices, exhibitors, or room features like firehoses, coffee machines, and TVs. Referred to as 'Locations,' 'Places,' or 'POIs' interchangeably, MapsIndoors uses 'Locations' to define these points. These locations have properties such as ID, type, geometry (in GeoJSON format), aliases, anchor, building, categories, description, display rule, and more. You can interact with these locations using the MapsIndoors SDK through the 'MapsIndoors' class and its 'setDisplayRule' method. This method enables customization of display rules for one or multiple locations, allowing settings like polygon visibility, fill color, and custom icons."
-}
-
-
-,{"input": "How can I adjust the icon size when a user hovers over a location in MapsIndoors?",
-  "output": "You can adjust the icon size when a user hovers over a location by specifying the 'iconScale' property in the DisplayRule for that location.",
-  "code": "// Example: Increasing icon size on hover\nconst hoverDisplayRule = {\n    iconScale: 1.2\n};\nmapsIndoorsInstance.setDisplayRule(locationId, hoverDisplayRule);"
-}
-
-
-
-,{"input": "How can I make location labels visible only at specific zoom levels in MapsIndoors?",
-  "output": "You can control the visibility of location labels at different zoom levels by setting the 'labelZoomFrom' and 'labelZoomTo' properties in the DisplayRule for those locations.",
-  "code": "// Example: Display labels between zoom levels 16 to 18\nconst labelDisplayRule = {\n    labelZoomFrom: 16,\n    labelZoomTo: 18\n};\nmapsIndoorsInstance.setDisplayRule(locationId, labelDisplayRule);"
-}
-
-
-,{"input": "How can I hide the polygon for a specific type when zoomed out in MapsIndoors?",
-  "output": "You can hide the polygon for a specific type when zoomed out by configuring the 'polygonVisible,' 'polygonZoomFrom,' and 'polygonZoomTo' properties in the DisplayRule for that type.",
-  "code": "// Example: Hiding the polygon when zoomed out\nconst hidePolygonDisplayRule = {\n    polygonVisible: false,\n    polygonZoomFrom: 16,\n    polygonZoomTo: 18\n};\nmapsIndoorsInstance.setDisplayRule('building', hidePolygonDisplayRule);"
-}
-
-,
-"input": "What kinds of properites can be modified within a display rule?",
-"output": "
-displayRule: {
-    visible: true,
-    iconVisible: true,
-    zoomFrom: 16.0,
-    zoomTo: 22.0,
-    icon: "https://app.mapsindoors.com/mapsindoors/cms/assets/icons/misc/default-marker.png?71488",
-    iconScale: 1.0,
-    iconSize: {
-        width: 20.0,
-        height: 20.0
-    },
-    labelVisible: true,
-    label: '{{name}}',
-    labelZoomFrom: 16.0,
-    labelZoomTo: 22.0,
-    labelMaxWidth: 0, //0 means infinite eg lines will not be broken based on width
-    polygon: {
-        visible": false,
-        zoomFrom": 18,
-        zoomTo": 22,
-        strokeWidth": 2.0,
-        strokeColor": '#3071D9',
-        strokeOpacity": 1.0,
-        fillColor": '#3071D9',
-        fillOpacity": 0.2
-    },
-    walls: { 
-        visible": true,
-        color": '#707a89',
-        height": 2.0,
-        zoomFrom": 16.0,
-        zoomTo": 22.0
-    },
-    extrusion: {
-        visible: true,
-        color: '#aeb9cb',
-        height: 2.25,
-        zoomFrom: 16.0,
-        zoomTo: 22.0
-    },
-    model3D: { 
-        visible: true,
-        zoomFrom: 16.0,
-        zoomTo: 22.0,
-        model: null,
-        rotationX: 0.0,
-        rotationY: 0.0,
-        rotationZ: 0.0
-    },
-    model2D: {
-        visible": true,
-        zoomFrom": 16.0,
-        zoomTo": 22.0,
-        model": null,
-        widthMeters": 0,
-        heightMeters": 0,
-        bearing":0
-    }
-}"{
+{
+  "Question": "How to initialize a MapsIndoors instance in JavaScript?",
+  "Answer": "Instantiate MapsIndoors by calling the constructor with the necessary options.",
+  "Context": {
+    "Code": "const mapsIndoorsInstance = new mapsindoors.MapsIndoors({ mapView: mapViewInstance });"
+  }
+},
+{
+  "Question": "What does 'mapsIndoorsInstance' signify in MapsIndoors?",
+  "Answer": "'mapsIndoorsInstance' is the primary interface to interact with the MapsIndoors SDK.",
+  "Context": {
+    "Note": "This instance controls map interactions, layers, and other SDK features."
+  }
+},
+{
+  "Question": "How do you change floors in MapsIndoors?",
+  "Answer": "Use the 'setFloor' method on 'mapsIndoorsInstance' to switch floors.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.setFloor(floorNumber);",
+    "Note": "Replace 'floorNumber' with the desired floor index."
+  }
+},
+{
+  "Question": "What configurations does 'setLabelOptions' adjust in MapsIndoors?",
+  "Answer": "Adjust label display settings like alignment, color, and font with 'setLabelOptions'.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.setLabelOptions({ color: 'red', fontSize: '14px' });"
+  }
+},
+{
+  "Question": "Can you show how to customize label options in MapsIndoors?",
+  "Answer": "Customize labels using 'setLabelOptions' to set properties like color and font size.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.setLabelOptions({ alignment: 'center', color: '#FF0000', fontSize: '12px', fontStyle: 'italic' });"
+  }
+},
+{
+  "Question": "What is a 'mapsIndoorsInstance' and how is it instantiated?",
+  "Answer": "'mapsIndoorsInstance' is the primary controller of MapsIndoors, initialized with configuration options.",
+  "Context": {
+    "Code": "const mapsIndoorsInstance = new mapsindoors.MapsIndoors({ mapView: mapViewInstance });"
+  }
+},
+{
+  "Question": "How to switch floors in MapsIndoors?",
+  "Answer": "Use 'mapsIndoorsInstance.setFloor()' with a floor index to change the displayed floor.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.setFloor(floorIndex);"
+  }
+},
+{
+  "Question": "What label options can be adjusted with 'setLabelOptions' in MapsIndoors?",
+  "Answer": "Modify label characteristics like alignment, color, and font using 'setLabelOptions'.",
+  "Context": {
+    "Code": "const labelOptions = { align: 'left', color: '#FF5733', fontFamily: 'Arial', fontSize: '14px', fontWeight: 600 };\nmapsIndoorsInstance.setLabelOptions(labelOptions);"
+  }
+},
+{
+  "Question": "How do I customize label options with MapsIndoors?",
+  "Answer": "Change label parameters such as alignment, color, and font using 'setLabelOptions'.",
+  "Context": {
+    "Code": "const customLabelOptions = { align: 'center', color: '#007BFF', fontFamily: 'Arial', fontSize: '16px', fontWeight: 700 };\nmapsIndoorsInstance.setLabelOptions(customLabelOptions);"
+  }
+},
+{
+  "Question": "How to modify runtime icons for MapsIndoors locations?",
+  "Answer": "Apply a new display rule with 'mapsIndoorsInstance.setDisplayRule' to update icons for locations.",
+  "Context": {
+    "Code": "const locationIds = ['locationId1', 'locationId2'];\nconst customDisplayRule = { icon: 'custom_icon.png' };\nmapsIndoorsInstance.setDisplayRule(locationIds, customDisplayRule);"
+  }
+},
+{
+  "Question": "What are MapsIndoors locations and their capabilities?",
+  "Answer": "MapsIndoors locations represent points of interest and can be manipulated using SDK methods like 'setDisplayRule' for customization.",
+  "Context": {
+    "Note": "Locations have properties like ID, type, geometry, and can be customized in display and functionality."
+  }
+},
+{
+  "Question": "How to resize location icons on hover in MapsIndoors?",
+  "Answer": "Set 'iconScale' in the DisplayRule when a user hovers over a location to adjust icon size.",
+  "Context": {
+    "Code": "const hoverDisplayRule = { iconScale: 1.2 };\nmapsIndoorsInstance.setDisplayRule(locationId, hoverDisplayRule);"
+  }
+},
+{
+  "Question": "How to make location labels visible at certain zoom levels in MapsIndoors?",
+  "Answer": "Use 'labelZoomFrom' and 'labelZoomTo' in DisplayRule to show labels only within specific zoom levels.",
+  "Context": {
+    "Code": "const labelDisplayRule = { labelZoomFrom: 16, labelZoomTo: 18 };\nmapsIndoorsInstance.setDisplayRule(locationId, labelDisplayRule);"
+  }
+},
+{
+  "Question": "How to hide location polygons at certain zoom levels in MapsIndoors?",
+  "Answer": "Configure 'polygonVisible', 'polygonZoomFrom', and 'polygonZoomTo' in DisplayRule to control polygon visibility based on zoom level.",
+  "Context": {
+    "Code": "const polygonDisplayRule = { polygonVisible: false, polygonZoomFrom: 16, polygonZoomTo: 18 };\nmapsIndoorsInstance.setDisplayRule('typeId', polygonDisplayRule);"
+  }
+},
+{
+  "Question": "What properties are modifiable in a MapsIndoors display rule?",
+  "Answer": "A display rule can modify properties like visibility, icon details, label settings, polygon appearance, and 3D or 2D models.",
+  "Context": {
+    "Code": "const displayRule = { visible: true, icon: 'icon_url.png', labelVisible: true, polygon: { visible: false }, model3D: { visible: true } };\nmapsIndoorsInstance.setDisplayRule(locationId, displayRule);"
+  }
+},
+{
     "Question": "How can I retrieve the location details by external IDs like 'ABC123', 'ABC124,' and 'ABC125' using MapsIndoors?",
     "Answer": "mapsIndoorsInstance.getLocationsByExternalId(['ABC123', 'ABC124', 'ABC125'])\n  .then(locations => {\n    // Handle the retrieved locations here\n  });",
     "Context": "ASYNC STATIC\ngetLocationsByExternalId(externalId) → {Promise.<Array.<Location>>}\nGet locations by externalId\n\nParameters:\n- externalId (string | or Array.<string>): The externalId of the location or an array of external IDs.\n\nReturns:\nType: Promise.<Array.<Location>>\n\nThis function retrieves location information based on external IDs. It returns a Promise that resolves to an array of Location objects. You can use this function to fetch location data by providing one or more external IDs."
