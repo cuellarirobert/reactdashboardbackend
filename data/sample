@@ -613,6 +613,13 @@
   }
 },
 {
+  "Question": "How can I display and center the map on a desk with a specific ID in my desk booking system?",
+  "Answer": "Fetch the desk's location using its ID from your booking system, then use MapsIndoors to center the map on the desk's coordinates. If the ID is an external ID in MapsIndoors, use 'getLocationsByExternalId'. After obtaining the location, use its anchor coordinates to center the map.",
+  "Context": {
+    "Code": "mapsindoors.services.LocationsService.getLocationsByExternalId('109jd91x109j0').then(locations => {\n  const deskLocation = locations[0]; // Assuming the ID is unique and the first result is desired\n  const mapViewInstance = new mapsindoors.mapView.MapboxView({\n    accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN',\n    center: deskLocation.properties.anchor.coordinates,\n    zoom: 17\n  });\n  const mapsIndoorsInstance = new mapsindoors.MapsIndoors({ mapView: mapViewInstance });\n  mapViewInstance.getMap().setCenter(deskLocation.properties.anchor.coordinates);\n});\n\n// Add marker for the desk on the map\nnew mapboxgl.Marker().setLngLat(deskLocation.properties.anchor.coordinates).addTo(mapViewInstance.getMap());"
+  }
+},
+{
   "Question": "How to sort MapsIndoors location search results by a property?",
   "Answer": "Sort search results by specifying 'orderBy' and 'sortOrder' in the 'getLocations' method.",
   "Context": {
