@@ -1,4 +1,18 @@
 [{
+  "Question": "What steps are required to add MapsIndoors to my web application using Mapbox?",
+  "Answer": "To add MapsIndoors using Mapbox, include the Mapbox CSS and JS script tags in your HTML. Then, use the MapsIndoors SDK script tag to load the necessary classes. Initialize a `MapboxView` with your Mapbox access token and other settings, and create a `MapsIndoors` instance with this view to manage map interactions.",
+  "Context": {
+    "Code": "/* Include Mapbox CSS and JS in your HTML head tag */\n<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'>\n<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>\n\n/* Initialize MapboxView and MapsIndoors after the Mapbox script has loaded */\nconst mapViewOptions = {\n  accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN',\n  element: document.getElementById('map'),\n  center: { lat: 38.8974905, lng: -77.0362723 },\n  zoom: 17,\n  maxZoom: 22\n};\nconst mapView = new mapsindoors.mapView.MapboxView(mapViewOptions);\nconst mapsIndoors = new mapsindoors.MapsIndoors({ mapView: mapView });"
+  }
+},
+{
+  "Question": "How do I display a MapsIndoors Map on my webpage?",
+  "Answer": "To display a MapsIndoors map, include the Mapbox CSS and JS in your HTML, then initialize MapboxView with your settings, and create a MapsIndoors instance to manage the map.",
+  "Context": {
+    "Code": "/* Add Mapbox CSS and JS to your HTML */\n<link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'>\n<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>\n\n/* After Mapbox scripts are loaded, initialize MapboxView and MapsIndoors */\nconst mapViewOptions = {\n  accessToken: 'YOUR_MAPBOX_ACCESS_TOKEN',\n  element: document.getElementById('map'),\n  center: { lat: 38.8974905, lng: -77.0362723 }, // Example coordinates\n  zoom: 17,\n  maxZoom: 22\n};\nconst mapView = new mapsindoors.mapView.MapboxView(mapViewOptions);\nconst mapsIndoors = new mapsindoors.MapsIndoors({ mapView: mapView });"
+  }
+},
+{
   "Question": "How to fetch locations with specific IDs and list them?",
   "Answer": "Retrieve locations using custom IDs from MapsIndoors and add them to an HTML list element.",
   "Context": {
