@@ -1,4 +1,11 @@
 [{
+  "Question": "How can I interact with a MapsIndoors location when it's clicked?",
+  "Answer": "To interact with a clicked location, set up an event listener using the 'addListener' method. In the callback function, you can access the location's properties and apply any logic, such as retrieving data or modifying the display.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.addListener('click', (location) => {\n  console.log(`Clicked: ${location.properties.name}`);\n  // Additional logic for the clicked location\n});"
+  }
+},
+{
   "Question": "What steps are required to add MapsIndoors to my web application using Mapbox?",
   "Answer": "To add MapsIndoors using Mapbox, include the Mapbox CSS and JS script tags in your HTML. Then, use the MapsIndoors SDK script tag to load the necessary classes. Initialize a `MapboxView` with your Mapbox access token and other settings, and create a `MapsIndoors` instance with this view to manage map interactions.",
   "Context": {
@@ -18,8 +25,7 @@
   "Context": {
     "Code": "mapsIndoors.services.LocationsService.getLocationsByExternalId(['id1', 'id2']).then(locations => {\n  locations.forEach(loc => {\n    const item = document.createElement('li');\n    item.textContent = loc.properties.name;\n    document.getElementById('location-list').appendChild(item);\n  });\n});"
   }
-},
-
+}
 ,{
   "Question": "How do I highlight specific locations on a map?",
   "Answer": "Use MapsIndoors to fetch and then highlight locations by their custom external IDs on the map.",
