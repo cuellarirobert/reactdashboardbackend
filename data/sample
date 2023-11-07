@@ -505,31 +505,24 @@ displayRule: {
    }
 },
 {
-   "Question": "How can I determine the currently active/displayed floor in MapsIndoors WebSDK using JavaScript?",
-   "Answer": "You can use the 'getFloor()' method to determine the currently active floor in MapsIndoors WebSDK. For example, you can call 'myMapsIndoorsInstance.getFloor()' to retrieve the active floor index, and then use this index to perform specific actions or conditions based on the floor. In your code, you can store the active floor index in a variable (e.g., 'x') and check it to perform actions like 'if (x === 8) { // do something }'.",
-   "Context": "The 'mapsIndoorsInstance.getFloor()' method allows you to programmatically access the current active floor. The floor index returned is an integer, typically a multiple of 10."
+  "Question": "How can I filter data by the selected floor in MapsIndoors WebSDK?",
+  "Answer": "You can listen to the 'floor_changed' event to trigger data filtering. Use 'mapsIndoorsInstance.addListener('floor_changed', (floorIndex) => { /* Your filtering logic here */ });' to execute a function whenever the floor changes, either through user interaction or by calling 'setFloor'.",
+  "Context": {
+    "Example": "mapsIndoorsInstance.addListener('floor_changed', (floorIndex) => {\n  filterDataBasedOnFloor(floorIndex);\n});\n\nfunction filterDataBasedOnFloor(floorIndex) {\n  // Implement filtering logic using the floorIndex\n}",
+    "Note": "The 'floorIndex' is the new floor level after a change occurs. Use this in your app to filter or display content related to the selected floor."
+  }
 },
 {
-   "Question": "Is it possible to load a particular floor immediately in MapsIndoors WebSDK without using the floor selector?",
-   "Answer": "Yes, it is possible to load a specific floor immediately in MapsIndoors WebSDK without relying on the floor selector. You can use the 'setFloor(floorIndex)' method to programmatically set the desired floor. For example, you can call 'myMapsIndoorsInstance.setFloor(floorIndex)' to load a particular floor without having to change the default floor globally. The 'floorIndex' should be an integer and typically a multiple of 10, representing the desired floor.",
-   "Context": "The 'mapsIndoorsInstance.setFloor()' method allows you to select and load a specific floor in MapsIndoors WebSDK without requiring user interaction through the floor selector. This is useful for providing direct links to specific floors or programmatically controlling the displayed floor."
+  "Question": "Can I set a floor in MapsIndoors WebSDK without the floor selector?",
+  "Answer": "Yes, use 'mapsIndoorsInstance.setFloor(floorIndex)' where 'floorIndex' is an integer, often a multiple of 10, to specify the floor level programmatically.",
+  "Context": "This method bypasses the UI and directly sets the floor, ideal for URLs pointing to a certain floor or automated floor navigation."
 },
 {
-    "Question": "How do I add Mapbox popups when I click on a location or search for one?",
-    "Answer": "To add Mapbox popups when clicking on a location or searching for one in MapsIndoors, you can follow these steps:",
-    "Context": [
-        {
-            "Step": "Define how you want to retrieve the location, either by searching or using a click listener event via the MapsIndoors SDK."
-        },
-        {
-            "Step": "Once you have the location objects, you can work with the following JavaScript code:",
-            "Code": "let popup;\n\nconst handleMouseEnter = debounce((location) => {\n    // If a popup exists, remove it\n    if (popup) {\n        popup.remove();\n    }\n\n    console.log('hi');\n    console.log(location);\n\n    const coords = location.properties.anchor.coordinates;\n\n    const infoWindowContent = `<h2>${location.properties.name}</h2>`;\n\n    popup = new mapboxgl.Popup({ closeOnClick: true, closeButton: true, className: 'info-popup' })\n        .setLngLat([coords[1], coords[0]])\n        .setHTML(infoWindowContent)\n        .addTo(mapInstance);\n}, 500); // Debounce time is 250 milliseconds"
-        },
-        {
-            "Step": "In this code, 'mapInstance' would typically be the 'mapsIndoorsInstance.getMapView(mapView)' where 'mapView' is initialized when you need to load the map on the page.",
-            "Example": "const mapView = new mapsindoors.mapView.MapboxView(...);\nconst mapsIndoors = new mapsindoors.MapsIndoors({mapView: mapView})"
-        }
-    ]
+  "Question": "How to show a Mapbox popup on clicking a MapsIndoors location?",
+  "Answer": "Listen for 'click' events on the MapsIndoors instance, extract the clicked location's coordinates, and use them to create and display a Mapbox popup.",
+  "Context": {
+    "Code": "mapsIndoorsInstance.addListener('click', location => {\n  const coordinates = location.properties.anchor.coordinates;\n  new mapboxgl.Popup()\n    .setLngLat([coordinates[1], coordinates[0]])\n    .setHTML(`<h3>${location.properties.name}</h3>`)\n    .addTo(mapsIndoorsInstance.getMap());\n});"
+  }
 },
 {
     "Question": "How can I obtain the venue's anchor point and set it as the center for my Mapbox map in MapsIndoors using the client library?",
