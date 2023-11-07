@@ -20,6 +20,13 @@
   }
 },
 {
+  "Question": "How can I add a standard Mapbox marker to the map for an arbitrary point?",
+  "Answer": "Use Mapbox GL JS's `Marker` class to add a marker to the map. You can specify the longitude and latitude coordinates for the marker, and it will be independent of MapsIndoors locations.",
+  "Context": {
+    "Code": "const mapboxInstance = mapViewInstance.getMap();\n\n// Example coordinates for the marker\nconst markerCoordinates = { lng: -97.7421839, lat: 30.3605208 }; // Replace with your coordinates\n\n// Create a new Mapbox marker and add it to the map\nconst marker = new mapboxgl.Marker()\n  .setLngLat([markerCoordinates.lng, markerCoordinates.lat])\n  .addTo(mapboxInstance);"
+  }
+},
+{
   "Question": "How can I change the display of a MapsIndoors location when an item in a list view is clicked?",
   "Answer": "To change a location's display upon clicking a list item, set an event listener on the list item to call 'getLocation' with the location ID. Then, apply a custom display rule using 'setDisplayRule'. Optionally, adjust the map view to the location's floor and center.",
   "Context": {
