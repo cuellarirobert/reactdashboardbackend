@@ -20,6 +20,13 @@
   }
 },
 {
+  "Question": "How can I change the display of a MapsIndoors location when an item in a list view is clicked?",
+  "Answer": "To change a location's display upon clicking a list item, set an event listener on the list item to call 'getLocation' with the location ID. Then, apply a custom display rule using 'setDisplayRule'. Optionally, adjust the map view to the location's floor and center.",
+  "Context": {
+    "Code": "const customRule = { visible: true, polygonVisible: true, polygonFillColor: '#FF0000', /* ... other properties ... */ };\nlet previousLocationId = null;\n\nlistItem.addEventListener('click', () => {\n  const locationId = listItem.getAttribute('data-location-id');\n  mapsindoors.services.LocationsService.getLocation(locationId).then(location => {\n    mapsIndoorsInstance.setFloor(location.properties.floor);\n    mapInstance.setCenter(location.properties.anchor.coordinates);\n\n    if (previousLocationId) {\n      mapsIndoorsInstance.setDisplayRule(previousLocationId, null);\n    }\n\n    mapsIndoorsInstance.setDisplayRule(location.id, customRule);\n    previousLocationId = location.id;\n  });\n});"
+  }
+},
+{
   "Question": "How to fetch locations with specific IDs and list them?",
   "Answer": "Retrieve locations using custom IDs from MapsIndoors and add them to an HTML list element.",
   "Context": {
