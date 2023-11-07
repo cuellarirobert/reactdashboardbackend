@@ -586,7 +586,24 @@ displayRule: {
             "Important Note": "It's essential to distinguish between these two methods as they serve entirely different functionality. 'setDisplayRule' is for customizing the visual appearance of individual locations, while 'filter' is for controlling which location objects are displayed on the map."
         }
     ]
-}
+},
+[
+    {
+        "Question": "How do I center a map?",
+        "Answer": "To center a map using MapsIndoors, you can follow these steps:",
+        "Context": [
+            {
+                "Step": "Obtain the map object using 'mapsIndoorsInstance.getMap()'.",
+                "Step": "You can center the map on the coordinates of any clicked circle from the 'circle' layer. For example:",
+                "Code": "map.on('click', 'circle', (e) => {\nmap.flyTo({\ncenter: e.features[0].geometry.coordinates\n});\n});",
+                "Step": "Alternatively, you can use 'setCenter' instead of 'flyTo'.",
+                "Step": "If you are using the coordinates of a location, you can use:",
+                "Code": "location.properties.anchor.coordinates[1], location.properties.anchor.coordinates[0]"
+            }
+        ]
+    }
+]
+
 
 
 
