@@ -1,0 +1,2392 @@
+// English translations
+const en = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Walk',
+        bike: 'Bike',
+        transit: 'Transit',
+        drive: 'Drive',
+        destination: 'You have arrived',
+        leave: 'Leave',
+        from: 'From',
+        park: 'Park',
+        at: 'at',
+        building: 'Building',
+        venue: 'Venue',
+        takeStaircaseToLevel: 'Take the staircase to level',
+        takeLadderToLevel: 'Take the ladder to level',
+        takeElevatorToLevel: 'Take the elevator to level',
+        takeEscalatorToLevel: 'Take the escalator to level',
+        takeWheelchairLiftToLevel: 'Take the wheelchair lift to level',
+        takeWheelchairRampToLevel: 'Take the wheelchair ramp to level',
+        exit: 'Exit',
+        enter: 'Enter',
+        stops: 'stops',
+        andContinue: 'and continue',
+        continueStraightAhead: 'Continue straight ahead',
+        goLeft: 'Go left',
+        goSharpLeft: 'Turn sharp left',
+        goSlightLeft: 'Go slight left',
+        goRight: 'Go right',
+        goSharpRight: 'Turn sharp right',
+        goSlightRight: 'Go slight right',
+        turnAround: 'Turn around',
+        days: 'd',
+        hours: 'hr',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Start Wayfinding",
+        origin: "Origin",
+        destination: "Destination",
+        searchPlaceholder: "Search by name, category, building...",
+        noRouteFound: "No route found",
+        nothingFound: "Nothing was found",
+        myPosition: "My Position",
+        accessibility: "Accessibility",
+        accessibilityTooltip: "Enable accessibility to get routes that avoid stairs and escalators.",
+        walk: "Walk",
+        drive: "Drive",
+        bike: "Bike",
+        distance: "Distance",
+        estimatedTime: "Estimated Time",
+        go: "Go!",
+        accessibility: "Accessibility",
+        walk: "Walk",
+        drive: "Drive",
+        bike: "Bike"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "From",
+        to: "To",
+        level: "Level",
+        distance: "Distance",
+        estimatedTime: "Estimated Time",
+        myPosition: "My Position"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Level",
+        startOrientation: "Start Wayfinding"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Select a Venue"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Current"
+    }
+};
+
+
+// Spanish translations
+const es = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Camine',
+        bike: 'Bicicleta',
+        transit: 'Transito',
+        drive: 'Conduzca',
+        destination: 'Ha llegado',
+        leave: 'Salga',
+        from: 'Desde',
+        park: 'Estacione',
+        at: 'en',
+        building: 'Edificio',
+        venue: 'Lugar',
+        takeStaircaseToLevel: 'Tome la escalera hasta el nivel',
+        takeLadderToLevel: 'Tome la escalera hasta el nivel',
+        takeElevatorToLevel: 'Tome el ascensor hasta el nivel',
+        takeEscalatorToLevel: 'Tome la escalera mecánica hasta el nivel',
+        takeWheelchairLiftToLevel: 'Tome el ascensor para sillas de ruedas hasta el nivel',
+        takeWheelchairRampToLevel: 'Tome la rampa para sillas de ruedas hasta el nivel',
+        exit: 'Salida',
+        enter: 'Entrada',
+        stops: 'paradas',
+        andContinue: 'y continúe',
+        continueStraightAhead: 'Continúe recto',
+        goLeft: 'Gire a la izquierda',
+        goSharpLeft: 'Gire bruscamente a la izquierda',
+        goSlightLeft: 'Gire ligeramente a la izquierda',
+        goRight: 'Gire a la derecha',
+        goSharpRight: 'Gire bruscamente a la derecha',
+        goSlightRight: 'Gire ligeramente a la derecha',
+        turnAround: 'Dé la vuelta',
+        days: 'días',
+        hours: 'horas',
+        minutes: 'minutos',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Iniciar orientación",
+        origin: "Origen",
+        destination: "Destino",
+        searchPlaceholder: "Buscar por nombre, categoría, edificio...",
+        noRouteFound: "No se encontró ruta",
+        nothingFound: "No se encontró nada",
+        myPosition: "Mi posición",
+        accessibility: "Accesibilidad",
+        accessibilityTooltip: "Active la accesibilidad para obtener rutas que eviten escaleras y escaleras mecánicas.",
+        walk: "Caminar",
+        drive: "Conducir",
+        bike: "Bicicleta",
+        distance: "Distancia",
+        estimatedTime: "Tiempo estimado",
+        go: "¡Vamos!",
+        accessibility: "Accesibilidad",
+        walk: "Caminar",
+        drive: "Conducir",
+        bike: "Bicicleta"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Desde",
+        to: "Hacia",
+        level: "Nivel",
+        distance: "Distancia",
+        estimatedTime: "Tiempo estimado",
+        myPosition: "Mi posición"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Piso",
+        startOrientation: "Iniciar orientación"
+    },
+    
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Seleccione un lugar"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Actual"
+    }
+};
+
+// French translations
+const fr = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Marchez',
+        bike: 'Vélo',
+        transit: 'Transit',
+        drive: 'Conduisez',
+        destination: 'Vous êtes arrivé',
+        leave: 'Partez',
+        from: 'De',
+        park: 'Garez-vous',
+        at: 'à',
+        building: 'Bâtiment',
+        venue: 'Lieu',
+        takeStaircaseToLevel: 'Prenez l’escalier jusqu’au niveau',
+        takeLadderToLevel: 'Prenez l’échelle jusqu’au niveau',
+        takeElevatorToLevel: 'Prenez l’ascenseur jusqu’au niveau',
+        takeEscalatorToLevel: 'Prenez l’escalateur jusqu’au niveau',
+        takeWheelchairLiftToLevel: 'Prenez l’élévateur pour fauteuils roulants jusqu’au niveau',
+        takeWheelchairRampToLevel: 'Prenez la rampe pour fauteuils roulants jusqu’au niveau',
+        exit: 'Sortie',
+        enter: 'Entrez',
+        stops: 'arrêts',
+        andContinue: 'et continuez',
+        continueStraightAhead: 'Continuez tout droit',
+        goLeft: 'Allez à gauche',
+        goSharpLeft: 'Tournez nettement à gauche',
+        goSlightLeft: 'Légèrement à gauche',
+        goRight: 'Allez à droite',
+        goSharpRight: 'Tournez nettement à droite',
+        goSlightRight: 'Légèrement à droite',
+        turnAround: 'Faites demi-tour',
+        days: 'j',
+        hours: 'h',
+        minutes: 'min'
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Commencer l'orientation",
+        origin: "Origine",
+        destination: "Destination",
+        searchPlaceholder: "Recherche par nom, catégorie, bâtiment...",
+        noRouteFound: "Aucun itinéraire trouvé",
+        nothingFound: "Rien n'a été trouvé",
+        myPosition: "Ma position",
+        accessibility: "Accessibilité",
+        accessibilityTooltip: "Activez l'accessibilité pour obtenir des itinéraires qui évitent les escaliers et les escalators.",
+        walk: "Marcher",
+        drive: "Conduire",
+        bike: "Vélo",
+        distance: "Distance",
+        estimatedTime: "Temps estimé",
+        go: "Aller",
+        accessibility: "Accessibilité",
+        walk: "Marcher",
+        drive: "Conduire",
+        bike: "Vélo"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "De",
+        to: "À",
+        level: "Étage",
+        distance: "Distance",
+        estimatedTime: "Temps estimé",
+        myPosition: "Ma position"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Étage",
+        startOrientation: "Commencer l'orientation"
+    },
+    
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Sélectionnez un lieu"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Actuel"
+    }
+};
+
+// German translations
+const de = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Gehen',
+        bike: 'Fahrrad',
+        transit: 'Transit',
+        drive: 'Fahren',
+        destination: 'Sie sind angekommen',
+        leave: 'Verlassen',
+        from: 'Von',
+        park: 'Parken',
+        at: 'bei',
+        building: 'Gebäude',
+        venue: 'Veranstaltungsort',
+        takeStaircaseToLevel: 'Nehmen Sie die Treppe bis zur Ebene',
+        takeLadderToLevel: 'Nehmen Sie die Leiter bis zur Ebene',
+        takeElevatorToLevel: 'Nehmen Sie den Aufzug bis zur Ebene',
+        takeEscalatorToLevel: 'Nehmen Sie die Rolltreppe bis zur Ebene',
+        takeWheelchairLiftToLevel: 'Nehmen Sie den Rollstuhllift bis zur Ebene',
+        takeWheelchairRampToLevel: 'Nehmen Sie die Rollstuhlrampe bis zur Ebene',
+        exit: 'Ausgang',
+        enter: 'Eingang',
+        stops: 'Haltestellen',
+        andContinue: 'und weiter',
+        continueStraightAhead: 'Geradeaus weiter',
+        goLeft: 'Nach links gehen',
+        goSharpLeft: 'Scharf links abbiegen',
+        goSlightLeft: 'Leicht links abbiegen',
+        goRight: 'Nach rechts gehen',
+        goSharpRight: 'Scharf rechts abbiegen',
+        goSlightRight: 'Leicht rechts abbiegen',
+        turnAround: 'Umdrehen',
+        days: 'Tage',
+        hours: 'Stunden',
+        minutes: 'Minuten'
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Wegfindung starten",
+        origin: "Ursprung",
+        destination: "Ziel",
+        searchPlaceholder: "Suche nach Name, Kategorie, Gebäude...",
+        noRouteFound: "Keine Route gefunden",
+        nothingFound: "Nichts gefunden",
+        myPosition: "Meine Position",
+        accessibility: "Barrierefreiheit",
+        accessibilityTooltip: "Aktivieren Sie die Barrierefreiheit, um Routen zu erhalten, die Treppen und Rolltreppen vermeiden.",
+        walk: "Gehen",
+        drive: "Fahren",
+        bike: "Fahrrad",
+        distance: "Entfernung",
+        estimatedTime: "Geschätzte Zeit",
+        go: "Los"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Von",
+        to: "Zu",
+        level: "Ebene",
+        distance: "Entfernung",
+        estimatedTime: "Geschätzte Zeit",
+        myPosition: "Meine Position"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Ebene",
+        startOrientation: "Navigation starten"
+    },
+    
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Wählen Sie einen Veranstaltungsort"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Aktuell"
+    }
+};
+
+// Italian translations
+const it = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Cammina',
+        bike: 'Bici',
+        transit: 'Transito',
+        drive: 'Guida',
+        destination: 'Sei arrivato',
+        leave: 'Parti',
+        from: 'Da',
+        park: 'Parcheggia',
+        at: 'a',
+        building: 'Edificio',
+        venue: 'Luogo',
+        takeStaircaseToLevel: 'Prendi la scala fino al livello',
+        takeLadderToLevel: 'Prendi la scala fino al livello',
+        takeElevatorToLevel: 'Prendi l’ascensore fino al livello',
+        takeEscalatorToLevel: 'Prendi la scala mobile fino al livello',
+        takeWheelchairLiftToLevel: 'Prendi l’ascensore per sedie a rotelle fino al livello',
+        takeWheelchairRampToLevel: 'Prendi la rampa per sedie a rotelle fino al livello',
+        exit: 'Uscita',
+        enter: 'Entra',
+        stops: 'fermate',
+        andContinue: 'e continua',
+        continueStraightAhead: 'Continua dritto',
+        goLeft: 'Vai a sinistra',
+        goSharpLeft: 'Gira netto a sinistra',
+        goSlightLeft: 'Gira leggermente a sinistra',
+        goRight: 'Vai a destra',
+        goSharpRight: 'Gira netto a destra',
+        goSlightRight: 'Gira leggermente a destra',
+        turnAround: 'Gira',
+        days: 'giorni',
+        hours: 'ore',
+        minutes: 'minuti'
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Inizia l'orientamento",
+        origin: "Origine",
+        destination: "Destinazione",
+        searchPlaceholder: "Cerca per nome, categoria, edificio...",
+        noRouteFound: "Nessun percorso trovato",
+        nothingFound: "Non è stato trovato nulla",
+        myPosition: "La mia posizione",
+        accessibility: "Accessibilità",
+        accessibilityTooltip: "Attiva l'accessibilità per ottenere percorsi che evitano scale e scale mobili.",
+        walk: "Camminare",
+        drive: "Guidare",
+        bike: "Bici",
+        distance: "Distanza",
+        estimatedTime: "Tempo stimato",
+        go: "Vai"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Da",
+        to: "A",
+        level: "Livello",
+        distance: "Distanza",
+        estimatedTime: "Tempo stimato",
+        myPosition: "La mia posizione"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Piano",
+        startOrientation: "Inizia l'orientamento"
+    },
+    
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Seleziona un luogo"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Attuale"
+    }
+};
+
+
+// Arabic translations
+const ar = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'سير',
+        bike: 'دراجة',
+        transit: 'مرور',
+        drive: 'قيادة',
+        destination: 'لقد وصلت',
+        leave: 'غادر',
+        from: 'من',
+        park: 'اصف السيارة',
+        at: 'في',
+        building: 'مبنى',
+        venue: 'مكان',
+        takeStaircaseToLevel: 'استخدم الدرج إلى المستوى',
+        takeLadderToLevel: 'استخدم السلم إلى المستوى',
+        takeElevatorToLevel: 'استخدم المصعد إلى المستوى',
+        takeEscalatorToLevel: 'استخدم السلم المتحرك إلى المستوى',
+        takeWheelchairLiftToLevel: 'استخدم مصعد كراسي المقعدين إلى المستوى',
+        takeWheelchairRampToLevel: 'استخدم منحدر كراسي المقعدين إلى المستوى',
+        exit: 'مخرج',
+        enter: 'ادخل',
+        stops: 'توقفات',
+        andContinue: 'واستمر',
+        continueStraightAhead: 'استمر للأمام',
+        goLeft: 'اتجه يساراً',
+        goSharpLeft: 'انعطف بشدة يساراً',
+        goSlightLeft: 'انعطف قليلاً يساراً',
+        goRight: 'اتجه يمينًا',
+        goSharpRight: 'انعطف بشدة يمينًا',
+        goSlightRight: 'انعطف قليلاً يمينًا',
+        turnAround: 'استدر',
+        days: 'أيام',
+        hours: 'ساعات',
+        minutes: 'دقائق'
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "ابدأ التوجيه",
+        origin: "الأصل",
+        destination: "الوجهة",
+        searchPlaceholder: "ابحث بالاسم، الفئة، المبنى...",
+        noRouteFound: "لم يتم العثور على طريق",
+        nothingFound: "لم يتم العثور على شيء",
+        myPosition: "موقعي",
+        accessibility: "إمكانية الوصول",
+        accessibilityTooltip: "فعّل إمكانية الوصول للحصول على طرق تتجنب السلالم والسلالم المتحركة.",
+        walk: "مشي",
+        drive: "قيادة",
+        bike: "دراجة",
+        distance: "المسافة",
+        estimatedTime: "الوقت المقدر",
+        go: "انطلق"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "من",
+        to: "إلى",
+        level: "الطابق",
+        distance: "المسافة",
+        estimatedTime: "الوقت المقدر",
+        myPosition: "موقعي"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "الطابق",
+        startOrientation: "ابدأ التوجيه"
+    },
+    
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "اختر مكانًا"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "الحالي"
+    }
+}
+
+// Dutch translations
+const nl = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Lopen',
+        bike: 'Fietsen',
+        transit: 'Openbaar vervoer',
+        drive: 'Rijden',
+        destination: 'U bent gearriveerd',
+        leave: 'Verlaten',
+        from: 'Van',
+        park: 'Parkeren',
+        at: 'bij',
+        building: 'Gebouw',
+        venue: 'Locatie',
+        takeStaircaseToLevel: 'Neem de trap naar niveau',
+        takeLadderToLevel: 'Neem de ladder naar niveau',
+        takeElevatorToLevel: 'Neem de lift naar niveau',
+        takeEscalatorToLevel: 'Neem de roltrap naar niveau',
+        takeWheelchairLiftToLevel: 'Neem de rolstoellift naar niveau',
+        takeWheelchairRampToLevel: 'Neem de rolstoelhelling naar niveau',
+        exit: 'Uitgang',
+        enter: 'Binnengaan',
+        stops: 'haltes',
+        andContinue: 'en ga verder',
+        continueStraightAhead: 'Ga rechtdoor',
+        goLeft: 'Ga linksaf',
+        goSharpLeft: 'Sla scherp linksaf',
+        goSlightLeft: 'Sla licht linksaf',
+        goRight: 'Ga rechtsaf',
+        goSharpRight: 'Sla scherp rechtsaf',
+        goSlightRight: 'Sla licht rechtsaf',
+        turnAround: 'Keer om',
+        days: 'd',
+        hours: 'uur',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Start navigatie",
+        origin: "Startpunt",
+        destination: "Bestemming",
+        searchPlaceholder: "Zoeken op naam, categorie, gebouw...",
+        noRouteFound: "Geen route gevonden",
+        nothingFound: "Niets gevonden",
+        myPosition: "Mijn positie",
+        accessibility: "Toegankelijkheid",
+        accessibilityTooltip: "Schakel toegankelijkheid in om routes te krijgen die trappen en roltrappen vermijden.",
+        walk: "Lopen",
+        drive: "Rijden",
+        bike: "Fietsen",
+        distance: "Afstand",
+        estimatedTime: "Geschatte tijd",
+        go: "Ga!",
+        accessibility: "Toegankelijkheid",
+        walk: "Lopen",
+        drive: "Rijden",
+        bike: "Fietsen"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Van",
+        to: "Naar",
+        level: "Niveau",
+        distance: "Afstand",
+        estimatedTime: "Geschatte tijd",
+        myPosition: "Mijn positie"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Niveau",
+        startOrientation: "Start navigatie"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Kies een locatie"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Huidig"
+    }
+};
+
+// Swedish translations
+const sv = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Gå',
+        bike: 'Cykla',
+        transit: 'Kollektivtrafik',
+        drive: 'Kör',
+        destination: 'Du har anlänt',
+        leave: 'Lämna',
+        from: 'Från',
+        park: 'Parkera',
+        at: 'vid',
+        building: 'Byggnad',
+        venue: 'Plats',
+        takeStaircaseToLevel: 'Ta trappan till våning',
+        takeLadderToLevel: 'Ta stegen till våning',
+        takeElevatorToLevel: 'Ta hissen till våning',
+        takeEscalatorToLevel: 'Ta rulltrappan till våning',
+        takeWheelchairLiftToLevel: 'Ta rullstolshissen till våning',
+        takeWheelchairRampToLevel: 'Ta rullstolsrampen till våning',
+        exit: 'Utgång',
+        enter: 'Ingång',
+        stops: 'stopp',
+        andContinue: 'och fortsätt',
+        continueStraightAhead: 'Fortsätt rakt fram',
+        goLeft: 'Gå vänster',
+        goSharpLeft: 'Sväng skarpt vänster',
+        goSlightLeft: 'Sväng svagt vänster',
+        goRight: 'Gå höger',
+        goSharpRight: 'Sväng skarpt höger',
+        goSlightRight: 'Sväng svagt höger',
+        turnAround: 'Vänd om',
+        days: 'd',
+        hours: 'tim',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Starta vägledning",
+        origin: "Utgångspunkt",
+        destination: "Destination",
+        searchPlaceholder: "Sök efter namn, kategori, byggnad...",
+        noRouteFound: "Ingen rutt hittades",
+        nothingFound: "Inget hittades",
+        myPosition: "Min position",
+        accessibility: "Tillgänglighet",
+        accessibilityTooltip: "Aktivera tillgänglighet för att få rutter som undviker trappor och rulltrappor.",
+        walk: "Gå",
+        drive: "Kör",
+        bike: "Cykla",
+        distance: "Avstånd",
+        estimatedTime: "Beräknad tid",
+        go: "Gå!",
+        accessibility: "Tillgänglighet",
+        walk: "Gå",
+        drive: "Kör",
+        bike: "Cykla"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Från",
+        to: "Till",
+        level: "Våning",
+        distance: "Avstånd",
+        estimatedTime: "Beräknad tid",
+        myPosition: "Min position"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Våning",
+        startOrientation: "Starta vägledning"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Välj en plats"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Nuvarande"
+    }
+};
+
+// Danish translations
+const da = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Gå',
+        bike: 'Cykel',
+        transit: 'Offentlig transport',
+        drive: 'Kør',
+        destination: 'Du er ankommet',
+        leave: 'Forlad',
+        from: 'Fra',
+        park: 'Parkér',
+        at: 'ved',
+        building: 'Bygning',
+        venue: 'Sted',
+        takeStaircaseToLevel: 'Tag trappen til niveau',
+        takeLadderToLevel: 'Tag stigen til niveau',
+        takeElevatorToLevel: 'Tag elevatoren til niveau',
+        takeEscalatorToLevel: 'Tag rulletrappen til niveau',
+        takeWheelchairLiftToLevel: 'Tag kørestolsliften til niveau',
+        takeWheelchairRampToLevel: 'Tag kørestolsrampe til niveau',
+        exit: 'Udgang',
+        enter: 'Indgang',
+        stops: 'stop',
+        andContinue: 'og fortsæt',
+        continueStraightAhead: 'Fortsæt lige ud',
+        goLeft: 'Gå til venstre',
+        goSharpLeft: 'Drej skarpt til venstre',
+        goSlightLeft: 'Drej let til venstre',
+        goRight: 'Gå til højre',
+        goSharpRight: 'Drej skarpt til højre',
+        goSlightRight: 'Drej let til højre',
+        turnAround: 'Vend om',
+        days: 'd',
+        hours: 't',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Start orientering",
+        origin: "Oprindelse",
+        destination: "Destination",
+        searchPlaceholder: "Søg efter navn, kategori, bygning...",
+        noRouteFound: "Ingen rute fundet",
+        nothingFound: "Intet fundet",
+        myPosition: "Min position",
+        accessibility: "Tilgængelighed",
+        accessibilityTooltip: "Aktiver tilgængelighed for at få ruter, der undgår trapper og rulletrapper.",
+        walk: "Gå",
+        drive: "Kør",
+        bike: "Cykel",
+        distance: "Afstand",
+        estimatedTime: "Anslået tid",
+        go: "Gå!",
+        accessibility: "Tilgængelighed",
+        walk: "Gå",
+        drive: "Kør",
+        bike: "Cykel"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Fra",
+        to: "Til",
+        level: "Niveau",
+        distance: "Afstand",
+        estimatedTime: "Anslået tid",
+        myPosition: "Min position"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Niveau",
+        startOrientation: "Start orientering"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Vælg et sted"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Nuværende"
+    }
+};
+
+// Simplified Chinese translations
+const zh = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: '步行',
+        bike: '骑自行车',
+        transit: '乘坐公共交通',
+        drive: '驾车',
+        destination: '您已到达目的地',
+        leave: '离开',
+        from: '从',
+        park: '停车',
+        at: '在',
+        building: '建筑物',
+        venue: '场所',
+        takeStaircaseToLevel: '走楼梯到楼层',
+        takeLadderToLevel: '走梯子到楼层',
+        takeElevatorToLevel: '乘电梯到楼层',
+        takeEscalatorToLevel: '乘扶梯到楼层',
+        takeWheelchairLiftToLevel: '乘轮椅升降机到楼层',
+        takeWheelchairRampToLevel: '走轮椅坡道到楼层',
+        exit: '出口',
+        enter: '进入',
+        stops: '站',
+        andContinue: '继续',
+        continueStraightAhead: '直行',
+        goLeft: '左转',
+        goSharpLeft: '急转弯左转',
+        goSlightLeft: '稍微左转',
+        goRight: '右转',
+        goSharpRight: '急转弯右转',
+        goSlightRight: '稍微右转',
+        turnAround: '掉头',
+        days: '天',
+        hours: '小时',
+        minutes: '分钟',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "开始导航",
+        origin: "起点",
+        destination: "目的地",
+        searchPlaceholder: "按名称、类别、建筑物搜索...",
+        noRouteFound: "未找到路线",
+        nothingFound: "未找到任何内容",
+        myPosition: "我的位置",
+        accessibility: "无障碍",
+        accessibilityTooltip: "启用无障碍功能以获取避开楼梯和扶梯的路线。",
+        walk: "步行",
+        drive: "驾车",
+        bike: "骑自行车",
+        distance: "距离",
+        estimatedTime: "预计时间",
+        go: "出发！",
+        accessibility: "无障碍",
+        walk: "步行",
+        drive: "驾车",
+        bike: "骑自行车"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "从",
+        to: "到",
+        level: "楼层",
+        distance: "距离",
+        estimatedTime: "预计时间",
+        myPosition: "我的位置"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "楼层",
+        startOrientation: "开始导航"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "选择一个场所"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "当前"
+    }
+};
+
+// Russian translations
+const ru = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Идти пешком',
+        bike: 'Ехать на велосипеде',
+        transit: 'Общественный транспорт',
+        drive: 'Ехать на машине',
+        destination: 'Вы прибыли',
+        leave: 'Покинуть',
+        from: 'От',
+        park: 'Парковка',
+        at: 'в',
+        building: 'Здание',
+        venue: 'Место проведения',
+        takeStaircaseToLevel: 'Поднимитесь по лестнице на уровень',
+        takeLadderToLevel: 'Поднимитесь по лестнице на уровень',
+        takeElevatorToLevel: 'Поднимитесь на лифте на уровень',
+        takeEscalatorToLevel: 'Поднимитесь на эскалаторе на уровень',
+        takeWheelchairLiftToLevel: 'Поднимитесь на подъемнике для инвалидных колясок на уровень',
+        takeWheelchairRampToLevel: 'Поднимитесь по пандусу для инвалидных колясок на уровень',
+        exit: 'Выход',
+        enter: 'Вход',
+        stops: 'остановок',
+        andContinue: 'и продолжить',
+        continueStraightAhead: 'Продолжайте двигаться прямо',
+        goLeft: 'Поверните налево',
+        goSharpLeft: 'Резко поверните налево',
+        goSlightLeft: 'Немного поверните налево',
+        goRight: 'Поверните направо',
+        goSharpRight: 'Резко поверните направо',
+        goSlightRight: 'Немного поверните направо',
+        turnAround: 'Развернитесь',
+        days: 'дн',
+        hours: 'ч',
+        minutes: 'мин',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Начать путь",
+        origin: "Точка отправления",
+        destination: "Пункт назначения",
+        searchPlaceholder: "Поиск по названию, категории, зданию...",
+        noRouteFound: "Маршрут не найден",
+        nothingFound: "Ничего не найдено",
+        myPosition: "Мое положение",
+        accessibility: "Доступность",
+        accessibilityTooltip: "Включите доступность для получения маршрутов, избегающих лестниц и эскалаторов.",
+        walk: "Идти пешком",
+        drive: "Ехать на машине",
+        bike: "Ехать на велосипеде",
+        distance: "Расстояние",
+        estimatedTime: "Расчетное время",
+        go: "Поехали!",
+        accessibility: "Доступность",
+        walk: "Идти пешком",
+        drive: "Ехать на машине",
+        bike: "Ехать на велосипеде"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "От",
+        to: "К",
+        level: "Уровень",
+        distance: "Расстояние",
+        estimatedTime: "Расчетное время",
+        myPosition: "Мое положение"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Уровень",
+        startOrientation: "Начать путь"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Выберите место"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Текущее"
+    }
+};
+
+
+// Portuguese translations
+const pt = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Caminhe',
+        bike: 'Bicicleta',
+        transit: 'Transporte público',
+        drive: 'Dirija',
+        destination: 'Você chegou',
+        leave: 'Sair',
+        from: 'De',
+        park: 'Estacione',
+        at: 'em',
+        building: 'Edifício',
+        venue: 'Local',
+        takeStaircaseToLevel: 'Suba a escada para o nível',
+        takeLadderToLevel: 'Suba a escada para o nível',
+        takeElevatorToLevel: 'Pegue o elevador para o nível',
+        takeEscalatorToLevel: 'Pegue a escada rolante para o nível',
+        takeWheelchairLiftToLevel: 'Pegue o elevador para cadeira de rodas para o nível',
+        takeWheelchairRampToLevel: 'Pegue a rampa para cadeira de rodas para o nível',
+        exit: 'Saída',
+        enter: 'Entrada',
+        stops: 'paradas',
+        andContinue: 'e continue',
+        continueStraightAhead: 'Continue em frente',
+        goLeft: 'Vire à esquerda',
+        goSharpLeft: 'Vire bruscamente à esquerda',
+        goSlightLeft: 'Vire levemente à esquerda',
+        goRight: 'Vire à direita',
+        goSharpRight: 'Vire bruscamente à direita',
+        goSlightRight: 'Vire levemente à direita',
+        turnAround: 'Vire-se',
+        days: 'd',
+        hours: 'h',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Iniciar orientação",
+        origin: "Origem",
+        destination: "Destino",
+        searchPlaceholder: "Pesquisar por nome, categoria, edifício...",
+        noRouteFound: "Nenhuma rota encontrada",
+        nothingFound: "Nada encontrado",
+        myPosition: "Minha Posição",
+        accessibility: "Acessibilidade",
+        accessibilityTooltip: "Ative a acessibilidade para obter rotas que evitem escadas e escadas rolantes.",
+        walk: "Caminhe",
+        drive: "Dirija",
+        bike: "Bicicleta",
+        distance: "Distância",
+        estimatedTime: "Tempo Estimado",
+        go: "Vamos!",
+        accessibility: "Acessibilidade",
+        walk: "Caminhe",
+        drive: "Dirija",
+        bike: "Bicicleta"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "De",
+        to: "Para",
+        level: "Nível",
+        distance: "Distância",
+        estimatedTime: "Tempo Estimado",
+        myPosition: "Minha Posição"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Nível",
+        startOrientation: "Iniciar orientação"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Selecione um Local"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Atual"
+    }
+};
+
+// Hebrew translations
+const he = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'ללכת',
+        bike: 'לרכב על אופניים',
+        transit: 'תחבורה ציבורית',
+        drive: 'לנהוג',
+        destination: 'הגעת ליעד',
+        leave: 'עזוב',
+        from: 'מ',
+        park: 'חנה',
+        at: 'ב',
+        building: 'בניין',
+        venue: 'מקום',
+        takeStaircaseToLevel: 'עלה במדרגות לרמה',
+        takeLadderToLevel: 'עלה בסולם לרמה',
+        takeElevatorToLevel: 'עלה במעלית לרמה',
+        takeEscalatorToLevel: 'עלה במדרגות נעות לרמה',
+        takeWheelchairLiftToLevel: 'עלה במעלית לכסאות גלגלים לרמה',
+        takeWheelchairRampToLevel: 'עלה במדרון לכסאות גלגלים לרמה',
+        exit: 'יציאה',
+        enter: 'כניסה',
+        stops: 'תחנות',
+        andContinue: 'והמשך',
+        continueStraightAhead: 'המשך ישר',
+        goLeft: 'פנה שמאלה',
+        goSharpLeft: 'פנה חד שמאלה',
+        goSlightLeft: 'פנה קלות שמאלה',
+        goRight: 'פנה ימינה',
+        goSharpRight: 'פנה חד ימינה',
+        goSlightRight: 'פנה קלות ימינה',
+        turnAround: 'הפוך סביב',
+        days: 'ימים',
+        hours: 'שעות',
+        minutes: 'דקות',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "התחל ניווט",
+        origin: "מקור",
+        destination: "יעד",
+        searchPlaceholder: "חפש לפי שם, קטגוריה, בניין...",
+        noRouteFound: "לא נמצא מסלול",
+        nothingFound: "לא נמצא דבר",
+        myPosition: "המיקום שלי",
+        accessibility: "נגישות",
+        accessibilityTooltip: "הפעל נגישות לקבלת מסלולים המתחמקים ממדרגות ומדרגות נעות.",
+        walk: "ללכת",
+        drive: "לנהוג",
+        bike: "לרכב על אופניים",
+        distance: "מרחק",
+        estimatedTime: "זמן משוער",
+        go: "לך!",
+        accessibility: "נגישות",
+        walk: "ללכת",
+        drive: "לנהוג",
+        bike: "לרכב על אופניים"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "מ",
+        to: "אל",
+        level: "רמה",
+        distance: "מרחק",
+        estimatedTime: "זמן משוער",
+        myPosition: "המיקום שלי"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "רמה",
+        startOrientation: "התחל ניווט"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "בחר מקום"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "נוכחי"
+    }
+};
+
+const iw = he;
+
+
+// Irish (Gaelic) translations
+const ga = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Siúil',
+        bike: 'Rothaíocht',
+        transit: 'Iompar poiblí',
+        drive: 'Tiomáint',
+        destination: 'Tá tú tagtha',
+        leave: 'Fág',
+        from: 'Ó',
+        park: 'Páirceáil',
+        at: 'ag',
+        building: 'Foirgneamh',
+        venue: 'Ionad',
+        takeStaircaseToLevel: 'Tóg an staighre go leibhéal',
+        takeLadderToLevel: 'Tóg an dréimire go leibhéal',
+        takeElevatorToLevel: 'Tóg an t-ardaitheoir go leibhéal',
+        takeEscalatorToLevel: 'Tóg an staighre beo go leibhéal',
+        takeWheelchairLiftToLevel: 'Tóg an t-ardaitheoir cathaoireacha rothaí go leibhéal',
+        takeWheelchairRampToLevel: 'Tóg an rampa cathaoireacha rothaí go leibhéal',
+        exit: 'Bealach amach',
+        enter: 'Iontráil',
+        stops: 'stadanna',
+        andContinue: 'agus lean ar aghaidh',
+        continueStraightAhead: 'Lean díreach ar aghaidh',
+        goLeft: 'Téigh ar chlé',
+        goSharpLeft: 'Cas go géar ar chlé',
+        goSlightLeft: 'Cas go héadrom ar chlé',
+        goRight: 'Téigh ar dheis',
+        goSharpRight: 'Cas go géar ar dheis',
+        goSlightRight: 'Cas go héadrom ar dheis',
+        turnAround: 'Cas timpeall',
+        days: 'laethanta',
+        hours: 'uair an chloig',
+        minutes: 'nóiméad',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Tosaigh treoshuíomh",
+        origin: "Tús",
+        destination: "Ceann scríbe",
+        searchPlaceholder: "Cuardaigh de réir ainm, catagóir, foirgneamh...",
+        noRouteFound: "Níor aimsíodh aon bhealach",
+        nothingFound: "Níor aimsíodh aon rud",
+        myPosition: "Mo Shuíomh",
+        accessibility: "Inrochtaineacht",
+        accessibilityTooltip: "Cumasaigh inrochtaineacht chun bealaí a fháil a sheachnaíonn staighrí agus staighrí beo.",
+        walk: "Siúil",
+        drive: "Tiomáint",
+        bike: "Rothaíocht",
+        distance: "Fad",
+        estimatedTime: "Am Measta",
+        go: "Téigh!",
+        accessibility: "Inrochtaineacht",
+        walk: "Siúil",
+        drive: "Tiomáint",
+        bike: "Rothaíocht"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Ó",
+        to: "Go",
+        level: "Leibhéal",
+        distance: "Fad",
+        estimatedTime: "Am Measta",
+        myPosition: "Mo Shuíomh"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Leibhéal",
+        startOrientation: "Tosaigh treoshuíomh"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Roghnaigh Ionad"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Reatha"
+    }
+};
+
+// Māori translations
+const mi = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Hīkoi',
+        bike: 'Pahikara',
+        transit: 'Waka tūmatanui',
+        drive: 'Taraiwa',
+        destination: 'Kua tae koe',
+        leave: 'Waiho',
+        from: 'Mai i',
+        park: 'Tūnga waka',
+        at: 'i',
+        building: 'Whare',
+        venue: 'Wāhi',
+        takeStaircaseToLevel: 'Haere mā te arawhata ki te taumata',
+        takeLadderToLevel: 'Haere mā te arawhata ki te taumata',
+        takeElevatorToLevel: 'Haere mā te ararewa ki te taumata',
+        takeEscalatorToLevel: 'Haere mā te hīkoi nekeneke ki te taumata',
+        takeWheelchairLiftToLevel: 'Haere mā te ararewa tūru wīra ki te taumata',
+        takeWheelchairRampToLevel: 'Haere mā te rampa tūru wīra ki te taumata',
+        exit: 'Putanga',
+        enter: 'Tomokanga',
+        stops: 'mutu',
+        andContinue: 'ka haere tonu',
+        continueStraightAhead: 'Haere tonu whakamua',
+        goLeft: 'Huri māui',
+        goSharpLeft: 'Huri koi māui',
+        goSlightLeft: 'Huri iti māui',
+        goRight: 'Huri matau',
+        goSharpRight: 'Huri koi matau',
+        goSlightRight: 'Huri iti matau',
+        turnAround: 'Hurihia',
+        days: 'ra',
+        hours: 'haora',
+        minutes: 'meneti',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Tīmata aronga",
+        origin: "Tīmatanga",
+        destination: "Ūnga",
+        searchPlaceholder: "Rapua mā te ingoa, kāwai, whare...",
+        noRouteFound: "Kāore i kitea he huarahi",
+        nothingFound: "Kāore i kitea he mea",
+        myPosition: "Tūnga o nāianei",
+        accessibility: "Āheitanga",
+        accessibilityTooltip: "Whakahohe i te āheitanga kia whiwhi ara ka karo i ngā arawhata me ngā hīkoi nekeneke.",
+        walk: "Hīkoi",
+        drive: "Taraiwa",
+        bike: "Pahikara",
+        distance: "Tawhiti",
+        estimatedTime: "Wā tata",
+        go: "Haere!",
+        accessibility: "Āheitanga",
+        walk: "Hīkoi",
+        drive: "Taraiwa",
+        bike: "Pahikara"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Mai i",
+        to: "Ki",
+        level: "Taumata",
+        distance: "Tawhiti",
+        estimatedTime: "Wā tata",
+        myPosition: "Tūnga o nāianei"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Taumata",
+        startOrientation: "Tīmata aronga"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Tīpakohia he Wāhi"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "O nāianei"
+    }
+};
+
+// Polish translations
+const pl = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Idź pieszo',
+        bike: 'Jedź na rowerze',
+        transit: 'Transport publiczny',
+        drive: 'Jedź samochodem',
+        destination: 'Dotarłeś do celu',
+        leave: 'Opuść',
+        from: 'Od',
+        park: 'Parkuj',
+        at: 'przy',
+        building: 'Budynek',
+        venue: 'Miejsce',
+        takeStaircaseToLevel: 'Wejdź po schodach na poziom',
+        takeLadderToLevel: 'Wejdź po drabinie na poziom',
+        takeElevatorToLevel: 'Weź windę na poziom',
+        takeEscalatorToLevel: 'Weź schody ruchome na poziom',
+        takeWheelchairLiftToLevel: 'Weź windę dla wózków na poziom',
+        takeWheelchairRampToLevel: 'Skorzystaj z podjazdu dla wózków na poziom',
+        exit: 'Wyjście',
+        enter: 'Wejście',
+        stops: 'przystanki',
+        andContinue: 'i kontynuuj',
+        continueStraightAhead: 'Kontynuuj prosto',
+        goLeft: 'Skręć w lewo',
+        goSharpLeft: 'Ostry skręt w lewo',
+        goSlightLeft: 'Lekko skręć w lewo',
+        goRight: 'Skręć w prawo',
+        goSharpRight: 'Ostry skręt w prawo',
+        goSlightRight: 'Lekko skręć w prawo',
+        turnAround: 'Zawróć',
+        days: 'dni',
+        hours: 'godz',
+        minutes: 'min',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Rozpocznij nawigację",
+        origin: "Początek",
+        destination: "Cel",
+        searchPlaceholder: "Szukaj po nazwie, kategorii, budynku...",
+        noRouteFound: "Nie znaleziono trasy",
+        nothingFound: "Nic nie znaleziono",
+        myPosition: "Moja pozycja",
+        accessibility: "Dostępność",
+        accessibilityTooltip: "Włącz dostępność, aby uzyskać trasy omijające schody i ruchome schody.",
+        walk: "Idź pieszo",
+        drive: "Jedź samochodem",
+        bike: "Jedź na rowerze",
+        distance: "Dystans",
+        estimatedTime: "Szacowany czas",
+        go: "Ruszaj!",
+        accessibility: "Dostępność",
+        walk: "Idź pieszo",
+        drive: "Jedź samochodem",
+        bike: "Jedź na rowerze"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Od",
+        to: "Do",
+        level: "Poziom",
+        distance: "Dystans",
+        estimatedTime: "Szacowany czas",
+        myPosition: "Moja pozycja"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Poziom",
+        startOrientation: "Rozpocznij nawigację"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Wybierz miejsce"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Obecny"
+    }
+};
+
+
+// Malay translations
+const ms = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Berjalan kaki',
+        bike: 'Berbasikal',
+        transit: 'Pengangkutan awam',
+        drive: 'Memandu',
+        destination: 'Anda telah tiba',
+        leave: 'Keluar',
+        from: 'Dari',
+        park: 'Letak kereta',
+        at: 'di',
+        building: 'Bangunan',
+        venue: 'Tempat',
+        takeStaircaseToLevel: 'Gunakan tangga ke tingkat',
+        takeLadderToLevel: 'Gunakan tangga ke tingkat',
+        takeElevatorToLevel: 'Gunakan lif ke tingkat',
+        takeEscalatorToLevel: 'Gunakan eskalator ke tingkat',
+        takeWheelchairLiftToLevel: 'Gunakan lif kerusi roda ke tingkat',
+        takeWheelchairRampToLevel: 'Gunakan ramp kerusi roda ke tingkat',
+        exit: 'Keluar',
+        enter: 'Masuk',
+        stops: 'hentian',
+        andContinue: 'dan teruskan',
+        continueStraightAhead: 'Teruskan ke hadapan',
+        goLeft: 'Belok kiri',
+        goSharpLeft: 'Belok tajam ke kiri',
+        goSlightLeft: 'Belok sedikit ke kiri',
+        goRight: 'Belok kanan',
+        goSharpRight: 'Belok tajam ke kanan',
+        goSlightRight: 'Belok sedikit ke kanan',
+        turnAround: 'Pusing balik',
+        days: 'hari',
+        hours: 'jam',
+        minutes: 'minit',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Mulakan orientasi",
+        origin: "Asal",
+        destination: "Destinasi",
+        searchPlaceholder: "Cari mengikut nama, kategori, bangunan...",
+        noRouteFound: "Tiada laluan ditemui",
+        nothingFound: "Tiada apa-apa ditemui",
+        myPosition: "Posisi Saya",
+        accessibility: "Kebolehcapaian",
+        accessibilityTooltip: "Aktifkan kebolehcapaian untuk laluan yang mengelakkan tangga dan eskalator.",
+        walk: "Berjalan kaki",
+        drive: "Memandu",
+        bike: "Berbasikal",
+        distance: "Jarak",
+        estimatedTime: "Anggaran Masa",
+        go: "Jom!",
+        accessibility: "Kebolehcapaian",
+        walk: "Berjalan kaki",
+        drive: "Memandu",
+        bike: "Berbasikal"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Dari",
+        to: "Ke",
+        level: "Tingkat",
+        distance: "Jarak",
+        estimatedTime: "Anggaran Masa",
+        myPosition: "Posisi Saya"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Tingkat",
+        startOrientation: "Mulakan orientasi"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Pilih Tempat"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Semasa"
+    }
+};
+
+// Hindi translations
+const hi = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'पैदल चलें',
+        bike: 'साइकिल चलाएं',
+        transit: 'सार्वजनिक परिवहन',
+        drive: 'ड्राइव करें',
+        destination: 'आप पहुँच चुके हैं',
+        leave: 'छोड़ें',
+        from: 'से',
+        park: 'पार्क',
+        at: 'पर',
+        building: 'भवन',
+        venue: 'स्थल',
+        takeStaircaseToLevel: 'सीढ़ियाँ चढ़कर स्तर तक जाएँ',
+        takeLadderToLevel: 'सीढ़ी से स्तर तक जाएँ',
+        takeElevatorToLevel: 'लिफ्ट से स्तर तक जाएँ',
+        takeEscalatorToLevel: 'एस्केलेटर से स्तर तक जाएँ',
+        takeWheelchairLiftToLevel: 'व्हीलचेयर लिफ्ट से स्तर तक जाएँ',
+        takeWheelchairRampToLevel: 'व्हीलचेयर रैंप से स्तर तक जाएँ',
+        exit: 'निकास',
+        enter: 'प्रवेश करें',
+        stops: 'स्टॉप्स',
+        andContinue: 'और जारी रखें',
+        continueStraightAhead: 'सीधे आगे बढ़ें',
+        goLeft: 'बाएँ जाएँ',
+        goSharpLeft: 'तेज़ी से बाएँ मुड़ें',
+        goSlightLeft: 'हल्के से बाएँ मुड़ें',
+        goRight: 'दाएँ जाएँ',
+        goSharpRight: 'तेज़ी से दाएँ मुड़ें',
+        goSlightRight: 'हल्के से दाएँ मुड़ें',
+        turnAround: 'पलटें',
+        days: 'दिन',
+        hours: 'घंटे',
+        minutes: 'मिनट',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "मार्गदर्शन शुरू करें",
+        origin: "मूल",
+        destination: "गंतव्य",
+        searchPlaceholder: "नाम, श्रेणी, इमारत द्वारा खोजें...",
+        noRouteFound: "कोई मार्ग नहीं मिला",
+        nothingFound: "कुछ नहीं मिला",
+        myPosition: "मेरी स्थिति",
+        accessibility: "पहुंच",
+        accessibilityTooltip: "सीढ़ियों और एस्केलेटर्स से बचने के लिए मार्ग प्राप्त करने के लिए पहुंच सक्षम करें।",
+        walk: "पैदल चलें",
+        drive: "ड्राइव करें",
+        bike: "साइकिल चलाएं",
+        distance: "दूरी",
+        estimatedTime: "अनुमानित समय",
+        go: "चलें!",
+        accessibility: "पहुंच",
+        walk: "पैदल चलें",
+        drive: "ड्राइव करें",
+        bike: "साइकिल चलाएं"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "से",
+        to: "को",
+        level: "स्तर",
+        distance: "दूरी",
+        estimatedTime: "अनुमानित समय",
+        myPosition: "मेरी स्थिति"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "स्तर",
+        startOrientation: "मार्गदर्शन शुरू करें"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "स्थल चुनें"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "वर्तमान"
+    }
+};
+
+// Greek translations
+const el = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Περπάτησε',
+        bike: 'Ποδήλατο',
+        transit: 'Δημόσια μεταφορά',
+        drive: 'Οδήγησε',
+        destination: 'Έχετε φτάσει',
+        leave: 'Αποχώρηση',
+        from: 'Από',
+        park: 'Πάρκαρε',
+        at: 'στο',
+        building: 'Κτίριο',
+        venue: 'Χώρος',
+        takeStaircaseToLevel: 'Πάρε τη σκάλα για το επίπεδο',
+        takeLadderToLevel: 'Πάρε τη σκάλα για το επίπεδο',
+        takeElevatorToLevel: 'Πάρε το ασανσέρ για το επίπεδο',
+        takeEscalatorToLevel: 'Πάρε την κυλιόμενη σκάλα για το επίπεδο',
+        takeWheelchairLiftToLevel: 'Πάρε το ανελκυστήρα αναπηρικού καροτσιού για το επίπεδο',
+        takeWheelchairRampToLevel: 'Πάρε τη ράμπα αναπηρικού καροτσιού για το επίπεδο',
+        exit: 'Έξοδος',
+        enter: 'Είσοδος',
+        stops: 'στάσεις',
+        andContinue: 'και συνέχισε',
+        continueStraightAhead: 'Συνέχισε ευθεία',
+        goLeft: 'Πήγαινε αριστερά',
+        goSharpLeft: 'Στρίψε απότομα αριστερά',
+        goSlightLeft: 'Στρίψε ελαφρά αριστερά',
+        goRight: 'Πήγαινε δεξιά',
+        goSharpRight: 'Στρίψε απότομα δεξιά',
+        goSlightRight: 'Στρίψε ελαφρά δεξιά',
+        turnAround: 'Κάνε αναστροφή',
+        days: 'ημέρες',
+        hours: 'ώρες',
+        minutes: 'λεπτά',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Ξεκίνησε πλοήγηση",
+        origin: "Αφετηρία",
+        destination: "Προορισμός",
+        searchPlaceholder: "Αναζήτηση με βάση το όνομα, την κατηγορία, το κτίριο...",
+        noRouteFound: "Δεν βρέθηκε διαδρομή",
+        nothingFound: "Δεν βρέθηκε τίποτα",
+        myPosition: "Η θέση μου",
+        accessibility: "Προσβασιμότητα",
+        accessibilityTooltip: "Ενεργοποίηση προσβασιμότητας για διαδρομές χωρίς σκάλες και κυλιόμενες σκάλες.",
+        walk: "Περπάτησε",
+        drive: "Οδήγησε",
+        bike: "Ποδήλατο",
+        distance: "Απόσταση",
+        estimatedTime: "Εκτιμώμενος χρόνος",
+        go: "Ξεκίνα!",
+        accessibility: "Προσβασιμότητα",
+        walk: "Περπάτησε",
+        drive: "Οδήγησε",
+        bike: "Ποδήλατο"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Από",
+        to: "Προς",
+        level: "Επίπεδο",
+        distance: "Απόσταση",
+        estimatedTime: "Εκτιμώμενος χρόνος",
+        myPosition: "Η θέση μου"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Επίπεδο",
+        startOrientation: "Ξεκίνησε πλοήγηση"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Επίλεξε έναν χώρο"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Τρέχων"
+    }
+};
+
+// Welsh translations
+const cy = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Cerdded',
+        bike: 'Beicio',
+        transit: 'Cludiant Cyhoeddus',
+        drive: 'Gyrru',
+        destination: 'Rydych chi wedi cyrraedd',
+        leave: 'Gadael',
+        from: 'O',
+        park: 'Parcio',
+        at: 'yn',
+        building: 'Adeilad',
+        venue: 'Lleoliad',
+        takeStaircaseToLevel: 'Cymerwch y grisiau i lefel',
+        takeLadderToLevel: 'Cymerwch yr ysgol i lefel',
+        takeElevatorToLevel: 'Cymerwch y lifft i lefel',
+        takeEscalatorToLevel: 'Cymerwch yr ysgol symudol i lefel',
+        takeWheelchairLiftToLevel: 'Cymerwch y lifft cadair olwyn i lefel',
+        takeWheelchairRampToLevel: 'Cymerwch y ramp cadair olwyn i lefel',
+        exit: 'Allanfa',
+        enter: 'Mynedfa',
+        stops: 'arosfannau',
+        andContinue: 'a pharhau',
+        continueStraightAhead: 'Parhau yn syth ymlaen',
+        goLeft: "Ewch i'r chwith",
+        goSharpLeft: "Tro i'r chwith yn llym",
+        goSlightLeft: "Tro i'r chwith ychydig",
+        goRight: "Ewch i'r dde",
+        goSharpRight: "Tro i'r dde yn llym",
+        goSlightRight: "Tro i'r dde ychydig",
+        turnAround: 'Troiwch o gwmpas',
+        days: 'dyddiau',
+        hours: 'oriau',
+        minutes: 'munudau',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Dechrau Cyfeirio",
+        origin: "Tarddiad",
+        destination: "Cyrchfan",
+        searchPlaceholder: "Chwilio yn ôl enw, categori, adeilad...",
+        noRouteFound: "Dim llwybr wedi'i ddarganfod",
+        nothingFound: "Dim byd wedi'i ddarganfod",
+        myPosition: "Fy Safle",
+        accessibility: "Hygyrchedd",
+        accessibilityTooltip: "Galluogi hygyrchedd i gael llwybrau sy'n osgoi grisiau a grisiau symudol.",
+        walk: "Cerdded",
+        drive: "Gyrru",
+        bike: "Beicio",
+        distance: "Pellter",
+        estimatedTime: "Amser Amcangyfrifedig",
+        go: "Ewch!",
+        accessibility: "Hygyrchedd",
+        walk: "Cerdded",
+        drive: "Gyrru",
+        bike: "Beicio"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "O",
+        to: "I",
+        level: "Lefel",
+        distance: "Pellter",
+        estimatedTime: "Amser Amcangyfrifedig",
+        myPosition: "Fy Safle"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Lefel",
+        startOrientation: "Dechrau Cyfeirio"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Dewiswch Leoliad"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Cyfredol"
+    }
+};
+
+// Turkish translations
+const tr = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Yürü',
+        bike: 'Bisikletle git',
+        transit: 'Toplu taşıma',
+        drive: 'Sür',
+        destination: 'Varış noktasına ulaştınız',
+        leave: 'Ayrıl',
+        from: 'Başlangıç',
+        park: 'Park et',
+        at: 'de',
+        building: 'Bina',
+        venue: 'Mekan',
+        takeStaircaseToLevel: 'Seviyeye çıkmak için merdiven kullan',
+        takeLadderToLevel: 'Seviyeye çıkmak için merdiven kullan',
+        takeElevatorToLevel: 'Seviyeye çıkmak için asansör kullan',
+        takeEscalatorToLevel: 'Seviyeye çıkmak için yürüyen merdiven kullan',
+        takeWheelchairLiftToLevel: 'Seviyeye çıkmak için tekerlekli sandalye asansörü kullan',
+        takeWheelchairRampToLevel: 'Seviyeye çıkmak için tekerlekli sandalye rampası kullan',
+        exit: 'Çıkış',
+        enter: 'Giriş',
+        stops: 'duraklar',
+        andContinue: 've devam et',
+        continueStraightAhead: 'Düz devam et',
+        goLeft: 'Sola git',
+        goSharpLeft: 'Keskin sola dön',
+        goSlightLeft: 'Hafif sola dön',
+        goRight: 'Sağa git',
+        goSharpRight: 'Keskin sağa dön',
+        goSlightRight: 'Hafif sağa dön',
+        turnAround: 'Dönüş yap',
+        days: 'gün',
+        hours: 'saat',
+        minutes: 'dakika',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Yol bulmaya başla",
+        origin: "Başlangıç noktası",
+        destination: "Varış noktası",
+        searchPlaceholder: "İsim, kategori, bina bazında ara...",
+        noRouteFound: "Rota bulunamadı",
+        nothingFound: "Hiçbir şey bulunamadı",
+        myPosition: "Benim pozisyonum",
+        accessibility: "Erişilebilirlik",
+        accessibilityTooltip: "Merdivenlerden ve yürüyen merdivenlerden kaçınan rotalar almak için erişilebilirliği etkinleştir.",
+        walk: "Yürü",
+        drive: "Sür",
+        bike: "Bisikletle git",
+        distance: "Mesafe",
+        estimatedTime: "Tahmini Süre",
+        go: "Başla!",
+        accessibility: "Erişilebilirlik",
+        walk: "Yürü",
+        drive: "Sür",
+        bike: "Bisikletle git"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Nereden",
+        to: "Nereye",
+        level: "Seviye",
+        distance: "Mesafe",
+        estimatedTime: "Tahmini Süre",
+        myPosition: "Benim pozisyonum"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Seviye",
+        startOrientation: "Yol bulmaya başla"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Bir Mekan Seçin"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Şu anki"
+    }
+};
+
+// Finnish translations
+const fi = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Kävele',
+        bike: 'Pyöräile',
+        transit: 'Julkiset kulkuneuvot',
+        drive: 'Aja',
+        destination: 'Olet perillä',
+        leave: 'Poistu',
+        from: 'Alkaen',
+        park: 'Pysäköi',
+        at: 'paikassa',
+        building: 'Rakennus',
+        venue: 'Paikka',
+        takeStaircaseToLevel: 'Mene portaista tasolle',
+        takeLadderToLevel: 'Mene tikkaista tasolle',
+        takeElevatorToLevel: 'Mene hissillä tasolle',
+        takeEscalatorToLevel: 'Mene liukuportailla tasolle',
+        takeWheelchairLiftToLevel: 'Mene pyörätuolihissillä tasolle',
+        takeWheelchairRampToLevel: 'Mene pyörätuolirampista tasolle',
+        exit: 'Uloskäynti',
+        enter: 'Sisäänkäynti',
+        stops: 'pysäkit',
+        andContinue: 'ja jatka',
+        continueStraightAhead: 'Jatka suoraan eteenpäin',
+        goLeft: 'Käänny vasemmalle',
+        goSharpLeft: 'Tee jyrkkä vasen',
+        goSlightLeft: 'Käänny hieman vasemmalle',
+        goRight: 'Käänny oikealle',
+        goSharpRight: 'Tee jyrkkä oikea',
+        goSlightRight: 'Käänny hieman oikealle',
+        turnAround: 'Käänny ympäri',
+        days: 'päivää',
+        hours: 'tuntia',
+        minutes: 'minuuttia',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Aloita reittiohjeet",
+        origin: "Lähtöpiste",
+        destination: "Määränpää",
+        searchPlaceholder: "Etsi nimen, kategorian, rakennuksen mukaan...",
+        noRouteFound: "Reittiä ei löytynyt",
+        nothingFound: "Mitään ei löytynyt",
+        myPosition: "Oma sijainti",
+        accessibility: "Esteettömyys",
+        accessibilityTooltip: "Ota käyttöön esteettömyys välttääksesi portaita ja liukuportaita.",
+        walk: "Kävele",
+        drive: "Aja",
+        bike: "Pyöräile",
+        distance: "Etäisyys",
+        estimatedTime: "Arvioitu aika",
+        go: "Mene!",
+        accessibility: "Esteettömyys",
+        walk: "Kävele",
+        drive: "Aja",
+        bike: "Pyöräile"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Alkaen",
+        to: "Päättyen",
+        level: "Taso",
+        distance: "Etäisyys",
+        estimatedTime: "Arvioitu aika",
+        myPosition: "Oma sijainti"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Taso",
+        startOrientation: "Aloita reittiohjeet"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Valitse paikka"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Nykyinen"
+    }
+};
+
+// Serbian (Latin script) translations
+const sr = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Hodaj',
+        bike: 'Vozi bicikl',
+        transit: 'Javni prevoz',
+        drive: 'Voziti',
+        destination: 'Stigli ste',
+        leave: 'Napusti',
+        from: 'Od',
+        park: 'Parkiraj',
+        at: 'u',
+        building: 'Zgrada',
+        venue: 'Mesto',
+        takeStaircaseToLevel: 'Uzmi stepenice do nivoa',
+        takeLadderToLevel: 'Uzmi merdevine do nivoa',
+        takeElevatorToLevel: 'Uzmi lift do nivoa',
+        takeEscalatorToLevel: 'Uzmi pokretne stepenice do nivoa',
+        takeWheelchairLiftToLevel: 'Uzmi lift za invalidska kolica do nivoa',
+        takeWheelchairRampToLevel: 'Uzmi rampu za invalidska kolica do nivoa',
+        exit: 'Izlaz',
+        enter: 'Ulaz',
+        stops: 'stanica',
+        andContinue: 'i nastavi',
+        continueStraightAhead: 'Nastavi pravo',
+        goLeft: 'Idi levo',
+        goSharpLeft: 'Oštro skreni levo',
+        goSlightLeft: 'Blago skreni levo',
+        goRight: 'Idi desno',
+        goSharpRight: 'Oštro skreni desno',
+        goSlightRight: 'Blago skreni desno',
+        turnAround: 'Okreni se',
+        days: 'dana',
+        hours: 'sati',
+        minutes: 'minuta',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Počni orijentaciju",
+        origin: "Početak",
+        destination: "Destinacija",
+        searchPlaceholder: "Pretraži po imenu, kategoriji, zgradi...",
+        noRouteFound: "Ruta nije pronađena",
+        nothingFound: "Ništa nije pronađeno",
+        myPosition: "Moja pozicija",
+        accessibility: "Pristupačnost",
+        accessibilityTooltip: "Omogući pristupačnost za rute koje izbegavaju stepenice i pokretne stepenice.",
+        walk: "Hodaj",
+        drive: "Voziti",
+        bike: "Vozi bicikl",
+        distance: "Udaljenost",
+        estimatedTime: "Procenjeno vreme",
+        go: "Kreni!",
+        accessibility: "Pristupačnost",
+        walk: "Hodaj",
+        drive: "Voziti",
+        bike: "Vozi bicikl"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Od",
+        to: "Do",
+        level: "Nivo",
+        distance: "Udaljenost",
+        estimatedTime: "Procenjeno vreme",
+        myPosition: "Moja pozicija"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Nivo",
+        startOrientation: "Počni orijentaciju"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Izaberi mesto"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Trenutno"
+    }
+};
+
+// Norwegian translations
+const no = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Gå',
+        bike: 'Sykle',
+        transit: 'Kollektivtransport',
+        drive: 'Kjør',
+        destination: 'Du har ankommet',
+        leave: 'Forlat',
+        from: 'Fra',
+        park: 'Parkér',
+        at: 'på',
+        building: 'Bygning',
+        venue: 'Sted',
+        takeStaircaseToLevel: 'Ta trappen til nivå',
+        takeLadderToLevel: 'Ta stigen til nivå',
+        takeElevatorToLevel: 'Ta heisen til nivå',
+        takeEscalatorToLevel: 'Ta rulletrappen til nivå',
+        takeWheelchairLiftToLevel: 'Ta rullestolheisen til nivå',
+        takeWheelchairRampToLevel: 'Ta rullestolrampen til nivå',
+        exit: 'Utgang',
+        enter: 'Inngang',
+        stops: 'stopp',
+        andContinue: 'og fortsett',
+        continueStraightAhead: 'Fortsett rett frem',
+        goLeft: 'Gå til venstre',
+        goSharpLeft: 'Ta en skarp venstresving',
+        goSlightLeft: 'Ta en liten venstresving',
+        goRight: 'Gå til høyre',
+        goSharpRight: 'Ta en skarp høyresving',
+        goSlightRight: 'Ta en liten høyresving',
+        turnAround: 'Snu',
+        days: 'dager',
+        hours: 'timer',
+        minutes: 'minutter',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Start orientering",
+        origin: "Opprinnelse",
+        destination: "Destinasjon",
+        searchPlaceholder: "Søk etter navn, kategori, bygning...",
+        noRouteFound: "Ingen rute funnet",
+        nothingFound: "Ingenting funnet",
+        myPosition: "Min posisjon",
+        accessibility: "Tilgjengelighet",
+        accessibilityTooltip: "Aktiver tilgjengelighet for å få ruter som unngår trapper og rulletrapper.",
+        walk: "Gå",
+        drive: "Kjør",
+        bike: "Sykle",
+        distance: "Avstand",
+        estimatedTime: "Estimert tid",
+        go: "Gå!",
+        accessibility: "Tilgjengelighet",
+        walk: "Gå",
+        drive: "Kjør",
+        bike: "Sykle"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Fra",
+        to: "Til",
+        level: "Nivå",
+        distance: "Avstand",
+        estimatedTime: "Estimert tid",
+        myPosition: "Min posisjon"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Nivå",
+        startOrientation: "Start orientering"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Velg et sted"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Gjeldende"
+    }
+};
+
+// Czech translations
+const cs = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Jdi pěšky',
+        bike: 'Jeď na kole',
+        transit: 'Veřejná doprava',
+        drive: 'Řiď',
+        destination: 'Dorazili jste',
+        leave: 'Odejdi',
+        from: 'Od',
+        park: 'Parkuj',
+        at: 'v',
+        building: 'Budova',
+        venue: 'Místo',
+        takeStaircaseToLevel: 'Jdi po schodech na úroveň',
+        takeLadderToLevel: 'Jdi po žebříku na úroveň',
+        takeElevatorToLevel: 'Jdi výtahem na úroveň',
+        takeEscalatorToLevel: 'Jdi po eskalátoru na úroveň',
+        takeWheelchairLiftToLevel: 'Jdi po výtahu pro vozíčkáře na úroveň',
+        takeWheelchairRampToLevel: 'Jdi po rampě pro vozíčkáře na úroveň',
+        exit: 'Výstup',
+        enter: 'Vstup',
+        stops: 'zastávky',
+        andContinue: 'a pokračuj',
+        continueStraightAhead: 'Pokračuj rovně',
+        goLeft: 'Jdi doleva',
+        goSharpLeft: 'Otoč se prudce doleva',
+        goSlightLeft: 'Zahněte mírně vlevo',
+        goRight: 'Jdi doprava',
+        goSharpRight: 'Otoč se prudce doprava',
+        goSlightRight: 'Zahněte mírně vpravo',
+        turnAround: 'Otoč se',
+        days: 'dnů',
+        hours: 'hodin',
+        minutes: 'minut',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Začněte navigaci",
+        origin: "Počátek",
+        destination: "Cíl",
+        searchPlaceholder: "Vyhledávejte podle jména, kategorie, budovy...",
+        noRouteFound: "Nenalezena žádná trasa",
+        nothingFound: "Nic nenalezeno",
+        myPosition: "Moje pozice",
+        accessibility: "Přístupnost",
+        accessibilityTooltip: "Aktivujte přístupnost, abyste získali trasy, které se vyhýbají schodům a eskalátorům.",
+        walk: "Jdi pěšky",
+        drive: "Řiď",
+        bike: "Jeď na kole",
+        distance: "Vzdálenost",
+        estimatedTime: "Předpokládaný čas",
+        go: "Jdi!",
+        accessibility: "Přístupnost",
+        walk: "Jdi pěšky",
+        drive: "Řiď",
+        bike: "Jeď na kole"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Od",
+        to: "Do",
+        level: "Úroveň",
+        distance: "Vzdálenost",
+        estimatedTime: "Předpokládaný čas",
+        myPosition: "Moje pozice"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Úroveň",
+        startOrientation: "Začněte navigaci"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Vyberte místo"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Současný"
+    }
+};
+
+
+// Albanian translations
+const sq = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'Ec',
+        bike: 'Biçikletë',
+        transit: 'Transport publik',
+        drive: 'Drejto',
+        destination: 'Keni arritur në destinacion',
+        leave: 'Largohu',
+        from: 'Nga',
+        park: 'Parko',
+        at: 'në',
+        building: 'Ndërtesë',
+        venue: 'Vendi',
+        takeStaircaseToLevel: 'Merr shkallët për në nivelin',
+        takeLadderToLevel: 'Merr shkallën për në nivelin',
+        takeElevatorToLevel: 'Merr ashensorin për në nivelin',
+        takeEscalatorToLevel: 'Merr shkallët e lëvizshme për në nivelin',
+        takeWheelchairLiftToLevel: 'Merr ngritësen për karrocë për në nivelin',
+        takeWheelchairRampToLevel: 'Merr rampën për karrocë për në nivelin',
+        exit: 'Dalje',
+        enter: 'Hyrje',
+        stops: 'ndalesa',
+        andContinue: 'dhe vazhdo',
+        continueStraightAhead: 'Vazhdo drejt përpara',
+        goLeft: 'Kthehu majtas',
+        goSharpLeft: 'Kthehu thellë majtas',
+        goSlightLeft: 'Kthehu pak majtas',
+        goRight: 'Kthehu djathtas',
+        goSharpRight: 'Kthehu thellë djathtas',
+        goSlightRight: 'Kthehu pak djathtas',
+        turnAround: 'Kthehu mbrapsht',
+        days: 'ditë',
+        hours: 'orë',
+        minutes: 'minuta',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "Fillo orientimin",
+        origin: "Origjina",
+        destination: "Destinacioni",
+        searchPlaceholder: "Kërko sipas emrit, kategorisë, ndërtesës...",
+        noRouteFound: "Nuk u gjet rrugë",
+        nothingFound: "Nuk u gjet asgjë",
+        myPosition: "Pozicioni im",
+        accessibility: "Qasje",
+        accessibilityTooltip: "Aktivizo qasjen për të marrë rrugë që shmangin shkallët dhe shkallët e lëvizshme.",
+        walk: "Ec",
+        drive: "Drejto",
+        bike: "Biçikletë",
+        distance: "Distanca",
+        estimatedTime: "Koha e vlerësuar",
+        go: "Shko!",
+        accessibility: "Qasje",
+        walk: "Ec",
+        drive: "Drejto",
+        bike: "Biçikletë"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "Nga",
+        to: "Deri",
+        level: "Niveli",
+        distance: "Distanca",
+        estimatedTime: "Koha e vlerësuar",
+        myPosition: "Pozicioni im"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "Niveli",
+        startOrientation: "Fillo orientimin"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "Zgjidh një vend"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "Aktual"
+    }
+};
+
+
+// Thai translations
+const th = {
+    // Route Instructions Translations
+    miRouteInstructions: {
+        walk: 'เดิน',
+        bike: 'ขี่จักรยาน',
+        transit: 'ขนส่งสาธารณะ',
+        drive: 'ขับรถ',
+        destination: 'คุณได้ถึงที่หมายแล้ว',
+        leave: 'ออกจาก',
+        from: 'จาก',
+        park: 'จอดรถ',
+        at: 'ที่',
+        building: 'อาคาร',
+        venue: 'สถานที่',
+        takeStaircaseToLevel: 'ใช้บันไดไปยังชั้น',
+        takeLadderToLevel: 'ใช้บันไดเลื่อนไปยังชั้น',
+        takeElevatorToLevel: 'ใช้ลิฟต์ไปยังชั้น',
+        takeEscalatorToLevel: 'ใช้บันไดเลื่อนไปยังชั้น',
+        takeWheelchairLiftToLevel: 'ใช้ลิฟต์สำหรับผู้ใช้วีลแชร์ไปยังชั้น',
+        takeWheelchairRampToLevel: 'ใช้ทางลาดสำหรับวีลแชร์ไปยังชั้น',
+        exit: 'ทางออก',
+        enter: 'เข้า',
+        stops: 'หยุด',
+        andContinue: 'และดำเนินต่อ',
+        continueStraightAhead: 'ดำเนินต่อไปข้างหน้า',
+        goLeft: 'ไปทางซ้าย',
+        goSharpLeft: 'เลี้ยวซ้ายอย่างรวดเร็ว',
+        goSlightLeft: 'เลี้ยวซ้ายเล็กน้อย',
+        goRight: 'ไปทางขวา',
+        goSharpRight: 'เลี้ยวขวาอย่างรวดเร็ว',
+        goSlightRight: 'เลี้ยวขวาเล็กน้อย',
+        turnAround: 'กลับรถ',
+        days: 'วัน',
+        hours: 'ชั่วโมง',
+        minutes: 'นาที',
+    },
+
+    // Wayfinding Translations
+    miWayfinding: {
+        startOrientation: "เริ่มการนำทาง",
+        origin: "จุดเริ่มต้น",
+        destination: "ปลายทาง",
+        searchPlaceholder: "ค้นหาตามชื่อ, หมวดหมู่, อาคาร...",
+        noRouteFound: "ไม่พบเส้นทาง",
+        nothingFound: "ไม่พบสิ่งใด",
+        myPosition: "ตำแหน่งของฉัน",
+        accessibility: "การเข้าถึง",
+        accessibilityTooltip: "เปิดใช้งานการเข้าถึงเพื่อรับเส้นทางที่หลีกเลี่ยงบันไดและบันไดเลื่อน",
+        walk: "เดิน",
+        drive: "ขับรถ",
+        bike: "ขี่จักรยาน",
+        distance: "ระยะทาง",
+        estimatedTime: "เวลาโดยประมาณ",
+        go: "ไป!",
+        accessibility: "การเข้าถึง",
+        walk: "เดิน",
+        drive: "ขับรถ",
+        bike: "ขี่จักรยาน"
+    },
+
+    // Directions Translations
+    miDirections: {
+        from: "จาก",
+        to: "ถึง",
+        level: "ชั้น",
+        distance: "ระยะทาง",
+        estimatedTime: "เวลาโดยประมาณ",
+        myPosition: "ตำแหน่งของฉัน"
+    },
+
+    // Instruction Translations
+    miInstruction: {
+        level: "ชั้น",
+        startOrientation: "เริ่มการนำทาง"
+    },
+
+    // Venue Selector Translations
+    miVenueSelector: {
+        selectAVenue: "เลือกสถานที่"
+    },
+
+    // Current Venue Translations
+    miCurrentVenue: {
+        current: "ปัจจุบัน"
+    }
+};
+
+
+
+
+// basque
+// hungarian
+// estonian
+// catalan
+// croatian
+// romanian
+
+
+// Export the function to get translations
+function getTranslationsForLanguage(languageCode) {
+    const translations = { en, es, fr, de, it, ar, nl, sv, da, zh, ru, pt, iw, he, ga, mi, pl, ms, hi, el, cy, tr, fi, sr, no, cs, sq, th}; // Include other language objects here
+    return translations[languageCode] || translations.en; // Default to English
+}
+
+export default getTranslationsForLanguage;
+
